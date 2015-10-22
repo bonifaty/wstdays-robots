@@ -1,0 +1,31 @@
+ul.timeline {
+	list-style: none;
+	overflow: hidden;
+	margin: 0;
+	margin-top: 2em;
+}
+
+.timeline > li {
+	list-style: none;
+	float: left;
+	margin-left: 50px;
+	opacity: 0.4;
+	font-size: 28px;
+}
+
+.timeline > li.active {
+	opacity: 1;
+}
+
+.timeline > li:before {
+	content: '->';
+	margin-right: 10px;
+}
+
+.timeline > li:first-child:before {
+	content: '';
+}
+
+.timeline > li:first-child {
+	margin-left: 0;
+}
