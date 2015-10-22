@@ -1,0 +1,8 @@
+{
+  "name": "robots_wdc",
+  "description": "Presentation for WSD 2015 Minsk",
+  "version": "0.0.1",
+  "dependencies": {
+    "reveal.js": "^3.1.0"
+  }
+}

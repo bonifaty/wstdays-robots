@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>reveal.js - The HTML Presentation Framework</title>
+
+		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+		<meta name="author" content="Hakim El Hattab">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="node_modules/reveal.js/css/reveal.css">
+		<link rel="stylesheet" href="node_modules/reveal.js/css/theme/black.css" id="theme">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="node_modules/reveal.js/lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'node_modules/reveal.js/css/print/pdf.css' : 'node_modules/reveal.js/css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="node_modules/reveal.js/lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+
+				<!-- <section data-background="images/intro.jpg"> -->
+				<section>
+					<h1>Роботы имеют право знать</h1>
+					<h3>(Заметки о Микроразметке)</h3>
+					<p>
+						Андрей Абрамов, <a href="http://www.graph.uk/">Graph.uk</a>
+					</p>
+					<p>
+						Web Standard Days, 31 октября, Минск
+					</p>
+				</section>
+
+				<section>
+					<h2>М?</h2>
+					<ul>
+						<li>Зачем</li>
+						<li>Словари</li>
+						<li>Синтаксисы</li>
+						<li>Примеры использования</li>
+						<li>Инструменты</li>
+						<li>Будущее</li>
+
+						<li style="margin-top: 1em;"><strike>Семантическая верстка</strike></li>
+						<li><strike>СЕО</strike></li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Проблема</h2>
+					<p>Роботы не понимают веб содержимое</p>
+					<p>(Картинка с интерфейсом / бендером и кодом)</p>
+				</section>
+
+				<section>
+					<h2>Для кого стараться?</h2>
+					<p>(картинка с логотипами всех потребителей)</p>
+				</section>
+
+				<section>
+					<h2>Решение = микроразметка</h2>
+				</section>
+
+				<section>
+					<h2>Терминология</h2>
+					<p><mark style="background-color: #86FF26;">Микроразметка</mark> &mdash; семантическая разметка</p>
+					<br>
+
+					<p><mark>Микроформаты</mark> &mdash; инициатива microformats.org</p>
+					<p><mark>Микроданные</mark> &mdash; стандарт HTML5 microdata</p>
+				</section>
+
+				<section>
+					<h2>Что нам понадобиться</h2>
+					<table>
+						<tr><td>
+							Словарь
+						</td>
+						<td>
+							Синтаксис
+						</td></tr>
+					</table>
+				</section>
+
+
+				<section>
+					<h2>Словари</h2>
+					<p>Dublin Core -> Good relations -> FOAF -> OpenGraph -> Schema.org</p>
+				</section>
+
+				<section>
+					<h2>Синтаксисы</h2>
+					<img src="images/standards.png" alt="" width="900">
+				</section>
+
+				<section>
+					<h2>Синтаксисы</h2>
+					<ul>
+						<li>RDFa (2008 Mark Birbeck)</li>
+						<li>Microformats (2006 Tantek Çelik)</li>
+						<li>Microdata (2009 Ian Hickson)</li>
+						<li>JSON-LD (2010 Manu Sporny)</li>
+						<li>RDFa Lite (2012 Manu Sporny)</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>RDFa</h2>
+					<pre><code class="html" data-trim><div about="http://dbpedia.org/resource/Albert_Einstein">
+  <span property="foaf:name">Albert Einstein</span>
+  <span property="dbp:dateOfBirth" datatype="xsd:date">1879-03-14</span>
+  <div property="dbp:birthPlace" resource="http://dbpedia.org/resource/German_Empire">
+    <span property="dbp:conventionalLongName">the German Empire</span>
+  </div>
+</div>		
+						</code></pre>
+				</section>
+
+				<section>
+					<h2>Что используют</h2>
+					<p>Диаграмма</p>
+				</section>
+				
+			</div>
+
+		</div>
+
+		<script src="node_modules/reveal.js/lib/js/head.min.js"></script>
+		<script src="node_modules/reveal.js/js/reveal.js"></script>
+
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: false,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'none', // none/fade/slide/convex/concave/zoom
+
+				width: 1200,
+				height: 768,
+
+				// Factor of the display size that should remain empty around the content
+				margin: 0.1,
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: 'node_modules/reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'node_modules/reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'node_modules/reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'node_modules/reveal.js/plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'node_modules/reveal.js/plugin/zoom-js/zoom.js', async: true },
+					{ src: 'node_modules/reveal.js/plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
