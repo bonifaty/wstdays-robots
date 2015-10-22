@@ -4,10 +4,9 @@
 	<head>
 		<meta charset="utf-8">
 
-		<title>reveal.js - The HTML Presentation Framework</title>
+		<title>Robots</title>
 
-		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
-		<meta name="author" content="Hakim El Hattab">
+		<meta name="author" content="Andrew Abramov">
 
 		<meta name="apple-mobile-web-app-capable" content="yes" />
 		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
@@ -43,13 +42,11 @@
 
 				<!-- <section data-background="images/intro.jpg"> -->
 				<section>
-					<h1>Роботы имеют право знать</h1>
-					<h3>(Заметки о Микроразметке)</h3>
+					<h2>Роботы имеют право знать</h2>
+					<h4>(Заметки о Микроразметке)</h4>
+					<img src="images/intro.jpg" alt="" width="600">
 					<p>
-						Андрей Абрамов, <a href="http://www.graph.uk/">Graph.uk</a>
-					</p>
-					<p>
-						Web Standard Days, 31 октября, Минск
+						<small>Андрей Абрамов, <a href="http://www.graph.uk/">Graph.uk</a></small>
 					</p>
 				</section>
 
@@ -118,8 +115,8 @@
 				<section>
 					<h2>Синтаксисы</h2>
 					<ul>
-						<li>RDFa (2008 Mark Birbeck)</li>
 						<li>Microformats (2006 Tantek Çelik)</li>
+						<li>RDFa (2008 Mark Birbeck)</li>
 						<li>Microdata (2009 Ian Hickson)</li>
 						<li>JSON-LD (2010 Manu Sporny)</li>
 						<li>RDFa Lite (2012 Manu Sporny)</li>
@@ -127,20 +124,65 @@
 				</section>
 
 				<section>
-					<h2>RDFa</h2>
-					<pre><code class="html" data-trim><div about="http://dbpedia.org/resource/Albert_Einstein">
-  <span property="foaf:name">Albert Einstein</span>
-  <span property="dbp:dateOfBirth" datatype="xsd:date">1879-03-14</span>
-  <div property="dbp:birthPlace" resource="http://dbpedia.org/resource/German_Empire">
-    <span property="dbp:conventionalLongName">the German Empire</span>
-  </div>
-</div>		
-						</code></pre>
+					<h2>Microformats</h2>
+					<pre><code class="html"><div class="vcard">
+	<div class="adr">
+		<span class="locality">г. Солнечный</span>,
+		<span class="street-address">просп. Романтиков, д. 21</span>
+	</div>
+	<div>Телефон: <span class="tel">+7 (890) 123-45-67</span></div>
+	<div>Мы работаем <span class="workhours">ежедневно с 11:00 до 24:00</span></div>
+</div></code></pre>
 				</section>
 
 				<section>
+					<h2>RDF/a</h2>
+					<pre><code class="html" data-trim><div about="http://dbpedia.org/resource/Albert_Einstein">
+	<span property="foaf:name">Albert Einstein</span>
+	<span property="dbp:dateOfBirth" datatype="xsd:date">1879-03-14</span>
+	<div property="dbp:birthPlace" resource="http://dbpedia.org/resource/German_Empire">
+		<span property="dbp:conventionalLongName">the German Empire</span>
+	</div>
+</div></code></pre>
+				</section>
+
+				<section>
+					<h2>Microdata</h2>
+					<pre><code class="html"><dl itemscope itemtype="http://vocab.example.net/book">
+	<dt>Title
+	<dd itemprop="title">The Reality Dysfunction
+	<dt>Author
+	<dt>Publication date
+	<dd><time itemprop="pubdate" datetime="1996-01-26">26 January 1996</time>
+</dl>
+<div id="author_information" itemprop="author">Peter F. Hamilton</div></code></pre>
+				</section>
+
+				<section>
+					<h2>RDF/a Lite</h2>
+					<pre><code class="html"><div property="aggregateRating" typeof="AggregateRating">
+	<span property="ratingValue">87</span>
+	out of <span property="bestRating">100</span>
+	based on <span property="ratingCount">24</span> user ratings
+</div></code></pre>
+				</section>
+
+				<section>
+					<h2>JSON-LD</h2>
+					<pre><code class="javasctipt">{
+  "@context": "http://json-ld.org/contexts/person.jsonld",
+  "@id": "http://dbpedia.org/resource/John_Lennon",
+  "name": "John Lennon",
+  "born": "1940-10-09",
+  "spouse": "http://dbpedia.org/resource/Cynthia_Lennon"
+}</code></pre>
+				</section>
+				
+
+				<section>
 					<h2>Что используют</h2>
-					<p>Диаграмма</p>
+					<p>Web data commons</p>
+					<img src="images/chart.jpg" alt="">
 				</section>
 				
 			</div>
