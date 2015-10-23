@@ -21,6 +21,20 @@
 
 		<!-- Custom styles -->
 		<link rel="stylesheet" href="styles/timeline.css">
+		<style>
+			.logos {
+				overflow: hidden;
+			}
+			.logos > img {
+				float: left;
+				max-width: 200px;
+				height: 100px;
+				border: none !important;
+				background: none !important;
+				box-shadow: none !important;
+				margin-right: 20px !important;
+			}
+		</style>
 
 		<!-- Printing and PDF exports -->
 		<script>
@@ -54,33 +68,67 @@
 				</section>
 
 				<section>
-					<h2>М?</h2>
+					<h2>О чем поговорим</h2>
 					<ul>
-						<li>Зачем</li>
+						<li>Зачем нам микроразметка</li>
 						<li>Словари</li>
 						<li>Синтаксисы</li>
 						<li>Примеры использования</li>
 						<li>Инструменты</li>
 						<li>Будущее</li>
 
-						<li style="margin-top: 1em;"><strike>Семантическая верстка</strike></li>
-						<li><strike>СЕО</strike></li>
+						<li style="margin-top: 1em;">
+							<strike>Семантическая верстка</strike><br>
+							<small><a href="http://html5doctor.com/">http://html5doctor.com/</a></small>
+						</li>
+						<li>
+							<strike>SEO</strike><br>
+							<small><a href="http://webstandardsdays.ru/2013/10/26/pres/seonism.pdf">Основы сеонизма</a></small>
+						</li>
 					</ul>
 				</section>
 
 				<section>
 					<h2>Проблема</h2>
-					<p>Роботы не понимают веб содержимое</p>
-					<p>(Картинка с интерфейсом / бендером и кодом)</p>
+
+					<p>
+						<div>
+							Картинка с фраем и интерфейсом
+						</div>
+						<div>
+							Картинка с бендером и кодом
+						</div>
+					</p>
+					
+					<div class="fragment">
+						<p>Роботы не понимают веб содержимое</p>
+					</div>
+					
 				</section>
 
 				<section>
 					<h2>Для кого стараться?</h2>
-					<p>(картинка с логотипами всех потребителей)</p>
+					<div class="logos">
+						<img src="images/robot-logos/bing.svg" alt="">
+						<img src="images/robot-logos/facebook.svg" alt="">
+						<img src="images/robot-logos/twitter.svg" alt="">
+						<img src="images/robot-logos/gmail.svg" alt="">
+						<img src="images/robot-logos/google.svg" alt="">
+						<img src="images/robot-logos/inbox.png" alt="">
+						<img src="images/robot-logos/linkedin.svg" alt="">
+						<img src="images/robot-logos/pinterest.svg" alt="">
+						<img src="images/robot-logos/slack.png" alt="">
+						<img src="images/robot-logos/telegram.svg" alt="">
+						<img src="images/robot-logos/vk.svg" alt="">
+						<img src="images/robot-logos/yahoo.svg" alt="">
+						<img src="images/robot-logos/yandex.svg" alt="">
+						<img src="images/robot-logos/siri.svg" alt="">
+						<img src="images/robot-logos/cortana.svg" alt="">
+					</div>
 				</section>
 
 				<section>
-					<h2>Решение = микроразметка</h2>
+					<h2>Микроразметка</h2>
 				</section>
 
 				<section>
@@ -93,37 +141,41 @@
 				</section>
 
 				<section>
-					<h2>Что нам понадобиться</h2>
-					<table>
-						<tr><td>
-							Словарь
-						</td>
-						<td>
-							Синтаксис
-						</td></tr>
-					</table>
-				</section>
+					<h2>Микроразметка</h2>
 
+					<ul>
+						<li>Словарь (описание объектов)</li>
+						<li>Синтаксис (как расширить HTML)</li>
+					</ul>
+				</section>
 
 				<section>
 					<h2>Словари</h2>
-					<p>Dublin Core -> Good relations -> FOAF -> OpenGraph -> Schema.org</p>
+
+					<ul>
+						<li>Dublin Core</li>
+						<li>FOAF</li>
+						<li>Data-vocabulary</li>
+						<li>Good relations</li>
+						<li>OpenGraph</li>
+						<li>Schema.org</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Синтаксисы</h2>
+					<ul class="timeline">
+						<li class="active">Microformats.org <br> (Tantek Çelik) <br>2006</li>
+						<li class="active">RDFa (W3C) <br> (Mark Birbeck) <br>2008</li>
+						<li class="active">Microdata <br> (Ian Hickson) <br>2009</li>
+						<li class="active">JSON-LD (W3C) <br> (Manu Sporny) <br>2010</li>
+						<li class="active">RDFa Lite (W3C) <br> (Manu Sporny) <br>2012</li>
+					</ul>
 				</section>
 
 				<section>
 					<h2>Синтаксисы</h2>
 					<img src="images/standards.png" alt="" width="900">
-				</section>
-
-				<section>
-					<h2>Синтаксисы</h2>
-					<ul>
-						<li>Microformats (2006 Tantek Çelik)</li>
-						<li>RDFa (2008 Mark Birbeck)</li>
-						<li>Microdata (2009 Ian Hickson)</li>
-						<li>JSON-LD (2010 Manu Sporny)</li>
-						<li>RDFa Lite (2012 Manu Sporny)</li>
-					</ul>
 				</section>
 
 				<section>
