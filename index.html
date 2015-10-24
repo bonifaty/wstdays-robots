@@ -288,7 +288,14 @@
 				</section>
 
 				<section>
-					<h2>Что сейчас?</h2>
+					<p>
+						Microdata .. RDFa .. JSON-LD
+					</p>
+					<h3>Так что использовать?</h3>
+				</section>
+
+				<section>
+					<h2>Хаос продолжается</h2>
 					<ul>
 						<li>Microformats сходят на нет</li>
 						<li>Microdata - самый поддерживаемый</li>
@@ -296,13 +303,6 @@
 						<li>Google активно внедряет JSON-LD</li>
 						<li>React 0.14 добавил поддержку RDFa</li>
 					</ul>
-				</section>
-
-				<section>
-					<p>
-						Microdata .. RDFa .. JSON-LD
-					</p>
-					<h3>Так что использовать?</h3>
 				</section>
 
 				<section>
@@ -323,7 +323,13 @@
 
 				<section>
 					<h2>OpenGraph</h2>
-
+					<ul>
+						<li>Facebook</li>
+						<li>VK</li>
+						<li>Google +</li>
+						<li>Twitter</li>
+						<li>Pinterest</li>
+					</ul>
 				</section>
 
 				<section>
@@ -331,9 +337,24 @@
 				</section>
 
 				<section>
-					<h2>Готовьте контент правильно</h2>
-					
+					<h2>Готовьте контент правильно</h2>				
 				</section>
+
+				<section>
+					<h2>Поисковики</h2>
+				</section>
+
+				<section>
+					<h2>Словарь Schema.org</h2>
+					<ul>
+						<li>Bing</li>
+						<li>Google</li>
+						<li>Yahoo!</li>
+						<li>Yandex</li>
+					</ul>
+				</section>
+
+				<section data-background="images/search/schemaorg.jpg"></section>
 
 				<section>
 					<h2>Поисковые сниппеты</h2>
@@ -379,7 +400,7 @@
 				</section>
 				
 				<section style="text-align: left;">
-					<h4>Что можно рассказать поисковику?</h4>
+					<h4>О чем рассказать поисковику?</h4>
 					<ul>
 						<li>Рецепт</li>
 						<li>Рейтинг</li>
@@ -393,11 +414,12 @@
 				</section>
 
 				<section>
-					<p>..а Google умеет еще вот так</p>
+					<p>..а еще Google умеет вот так</p>
 
 					<img src="images/search/google-search.jpg" alt="" height="300">
 
-					<pre><code class="javasctipt">{
+					<pre class="fragment"><code class="html"><script type="application/ld+json">
+{
   "@context": "http://schema.org",
   "@type": "WebSite",
   "url": "https://www.cpubenchmark.net",
@@ -406,7 +428,8 @@
     "target": "https://www.cpubenchmark.net/search/zoomsearch.php?q={search_term_string}",
     "query-input": "required name=search_term_string"
   }
-}</code></pre>
+}
+</script></code></pre>
 
 
 				</section>
