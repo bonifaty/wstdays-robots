@@ -89,7 +89,7 @@
 				</section>
 
 				<section>
-					<h2>Зачем микроразметка?</h2>					
+					<h2>Зачем нам микроразметка?</h2>					
 				</section>
 
 				<section>
@@ -103,7 +103,7 @@
 				<section data-background="images/code_bender.jpg"></section>
 
 				<section>
-					<p>Данные в HTML - не машиночитаемы</p>
+					<p>Данные в HTML &mdash; не машиночитаемые</p>
 				</section>
 
 				<section>
@@ -144,8 +144,8 @@
 					<h2>Микроразметка</h2>
 
 					<ul>
-						<li>Словарь (описание объектов)</li>
-						<li>Синтаксис (как расширить HTML)</li>
+						<li>Словарь</li>
+						<li>Синтаксис</li>
 					</ul>
 				</section>
 
@@ -153,12 +153,10 @@
 					<h2>Словари</h2>
 
 					<ul>
-						<li>Dublin Core</li>
-						<li>FOAF</li>
-						<li>Data-vocabulary</li>
-						<li>Good relations</li>
-						<li>OpenGraph</li>
+						<li>Open Graph</li>
 						<li>Schema.org</li>
+						<li>FOAF</li>
+						<li>...</li>
 					</ul>
 				</section>
 
@@ -173,7 +171,7 @@
 						<li class="active">Microformats.org <br> (Tantek Çelik) <br>2006</li>
 						<li class="active">RDFa (W3C) <br> (Mark Birbeck) <br>2008</li>
 						<li class="active">Microdata <br> (Ian Hickson) <br>2009</li>
-						<li class="active"><mark>JSON-LD (W3C)</mark> <br> (Manu Sporny) <br>2010</li>
+						<li class="active">JSON-LD (W3C) <br> (Manu Sporny) <br>2010</li>
 						<li class="active">RDFa Lite (W3C) <br> (Manu Sporny) <br>2012</li>
 					</ul>
 				</section>
@@ -181,12 +179,12 @@
 				<section>
 					<h2>Microformats</h2>
 					<pre><code class="html"><div class="vcard">
-	<div class="adr">
-		<span class="locality">г. Солнечный</span>,
-		<span class="street-address">просп. Романтиков, д. 21</span>
-	</div>
-	<div>Телефон: <span class="tel">+7 (890) 123-45-67</span></div>
-	<div>Мы работаем <span class="workhours">ежедневно с 11:00 до 24:00</span></div>
+  <span class="fn">Mark Watney</span>
+  <div class="org">NASA</div>
+  <a class="email" href="mailto:potatoes@nasa.gov">potatoes@nasa.gov</a>
+  <div class="adr">
+    <span class="country-name">USA</span>
+  </div>
 </div></code></pre>
 				
 				<ul class="timeline">
@@ -241,7 +239,7 @@
 				</section>
 
 				<section>
-					<h2><mark>JSON-LD</mark></h2>
+					<h2>JSON-LD</h2>
 					<pre><code class="javasctipt">{
   "@context": "http://json-ld.org/contexts/person.jsonld",
   "@id": "http://dbpedia.org/resource/John_Lennon",
@@ -288,14 +286,6 @@
 				</section>
 
 				<section>
-					<p>
-						Microdata .. RDFa .. JSON-LD
-					</p>
-					<h3>Так что использовать?</h3>
-					<p>Ориентируйтесь на задачу</p>
-				</section>
-
-				<section>
 					<h2>Тенденции</h2>
 					<ul>
 						<li>Microformats сходят на нет</li>
@@ -304,6 +294,14 @@
 						<li>Google активно внедряет JSON-LD</li>
 						<li>React 0.14 добавил поддержку RDFa</li>
 					</ul>
+				</section>
+
+				<section>
+					<p>
+						Microdata .. RDFa .. JSON-LD
+					</p>
+					<h3>Так что использовать?</h3>
+					<p>Ориентируйтесь на задачу</p>
 				</section>
 
 				<section>
@@ -319,7 +317,7 @@
 				<section>
 					<h2>Социальные сети</h2>
 					
-					<p>Мы делимся не ссылками - мы делимся контентом</p>
+					<p>Мы делимся не ссылками - мы делимся содержанием</p>
 				</section>
 
 				<section data-background="images/social/vk-preview.jpg"></section>
@@ -411,8 +409,8 @@
 </div></code></pre>
 				</section>
 				
-				<section style="text-align: left;">
-					<h4>О чем рассказать поисковику?</h4>
+				<section>
+					<h3>О чем рассказать поисковику?</h3>
 					<ul>
 						<li>Рецепт</li>
 						<li>Рейтинг</li>
@@ -456,10 +454,6 @@
 				</section>
 
 				<section>
-					<h2>Полномасштабный пример с событием</h2>
-				</section>
-
-				<section>
 					<h2>Будущее</h2>
 					<ul>
 						<li>Google Now / Siri / Cortana</li>
@@ -496,7 +490,7 @@
 
 				transition: 'none', // none/fade/slide/convex/concave/zoom
 
-				width: 1200,
+				width: 1366,
 				height: 768,
 
 				// Factor of the display size that should remain empty around the content
