@@ -34,6 +34,9 @@
 				box-shadow: none !important;
 				margin-right: 20px !important;
 			}
+			.pre .code {
+
+			}
 		</style>
 
 		<!-- Printing and PDF exports -->
@@ -317,10 +320,12 @@
 				<section>
 					<h2>Социальные сети</h2>
 					
-					<p>Мы делимся не ссылками - мы делимся содержанием</p>
+					<p>Мы делимся не ссылками &mdash; мы делимся содержанием</p>
 				</section>
 
 				<section data-background="images/social/vk-preview.jpg"></section>
+				<section data-background="images/social/fb-preview.jpg"></section>
+				<section data-background="images/social/tw-preview.jpg"></section>
 
 				<section>
 					<h2>OpenGraph</h2>
@@ -335,18 +340,53 @@
 				</section>
 
 				<section>
-					<h2>Готовьте контент правильно</h2>
-					<ul>
-						<li>Ограничения на длину</li>
-						<li>Спецсимволы</li>
-					</ul>
+					<h3>Open Graph</h3>
+					<pre><code class="html">&lt;html prefix="og: http://ogp.me/ns#"&gt;
+  &lt;head&gt;
+    <meta charset=utf-8>
+    <title>Продаю Звезду Cмерти</title>
+
+    <meta property="og:title" content="Звезда смерти" />
+    <meta property="og:url" content="http://bonifaty.github.io/examples/opengraph/" />
+    <meta property="og:description" content="Звезда смерти. Недорого, в отиличном состоянии.." />
+
+    <meta property="og:image" content="http://bonifaty.github.io/examples/opengraph/deathstar.jpg" />
+    <meta property="og:image:width" content="600" />
+    <meta property="og:image:height" content="600" />
+
+    <meta name="twitter:card" content="summary" />
+  &lt;/head&gt;
+&lt;/html&gt;</code></pre>
 				</section>
 
+				<section data-background="images/social/video.jpg"></section>
+
 				<section>
-					<h2>Особенности внедрения</h2>
+					<h3>Описывайте объекты</h3>
+
+					<pre><code>
+  <meta property="og:type" content="video">
+
+  <meta property="og:video:url" content="https://www.youtube.com/embed/vSZAkf_VpS0">
+  <meta property="og:video:secure_url" content="https://www.youtube.com/embed/vSZAkf_VpS0">
+  <meta property="og:video:type" content="text/html">
+  <meta property="og:video:width" content="1280">
+  <meta property="og:video:height" content="720">
+
+  <meta property="og:video:url" content="http://www.youtube.com/v/vSZAkf_VpS0?version=3">
+  <meta property="og:video:secure_url" content="https://www.youtube.com/v/vSZAkf_VpS0?version=3">
+  <meta property="og:video:type" content="application/x-shockwave-flash">
+  <meta property="og:video:width" content="1280">
+  <meta property="og:video:height" content="720">
+    </code></pre>
+  			</section>
+
+				<section>
+					<h2>Готовьте контент правильно</h2>
 					<ul>
-						<li>Кэш</li>
-						<li>Размер и пропорции изображений</li>
+						<li>Ограничения на длину(VK - 101 / FB - 155)</li> 
+						<li>Пропорции изображений</li>
+						<li>Спецсимволы</li>
 					</ul>
 				</section>
 
@@ -448,13 +488,39 @@
 					<h2>Emails</h2>
 
 					<ul>
+						<li>Google впереди всех</li>
+						<li>Типы с Schema.org</li>
 						<li>Gmail</li>
 						<li>Inbox</li>
 					</ul>
 				</section>
 
+				<section data-background="images/emails/gmail-flight.jpg"></section>
+
+				<section>
+					<p>CODE</p>
+				</section>
+
+
 				<section>
 					<h2>Будущее</h2>
+				</section>
+
+				<section>
+					<img src="images/future/apple.png" alt="">
+				</section>
+				<section>
+					<img src="images/future/apple-2.jpg" alt="">
+				</section>
+
+				<section>
+					<img src="images/future/cortana3.png" alt="">
+					<img src="images/future/cortana2.png" alt="">
+					<img src="images/future/cortana.png" alt="">
+				</section>
+
+				<section>
+					<h3>Будущее</h3>
 					<ul>
 						<li>Google Now / Siri / Cortana</li>
 						<li>Интернет вещей</li>
