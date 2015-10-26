@@ -92,7 +92,7 @@
 				</section>
 
 				<section>
-					<h2>Зачем нам микроразметка?</h2>					
+					<p>Зачем нам микроразметка?</p>					
 				</section>
 
 				<section>
@@ -121,12 +121,12 @@
 						<img src="images/robot-logos/twitter.svg" alt="">
 						<img src="images/robot-logos/linkedin.svg" alt="">
 						<img src="images/robot-logos/pinterest.svg" alt=""><br>
-						<img src="images/robot-logos/slack.png" alt="">
-						<img src="images/robot-logos/telegram.svg" alt="">
 						<img src="images/robot-logos/gmail.svg" alt="">
 						<img src="images/robot-logos/inbox.png" alt="">
-						<img src="images/robot-logos/siri.svg" alt="">
-						<img src="images/robot-logos/cortana.svg" alt="">
+						<img src="images/robot-logos/slack.png" alt="">
+						<img src="images/robot-logos/telegram.svg" alt="">
+						<!-- <img src="images/robot-logos/siri.svg" alt="">
+						<img src="images/robot-logos/cortana.svg" alt=""> -->
 					</div>
 				</section>
 
@@ -155,7 +155,7 @@
 				<section>
 					<h2>Словари</h2>
 
-					<ul>
+					<ul class="fragment">
 						<li>Open Graph</li>
 						<li>Schema.org</li>
 						<li>FOAF</li>
@@ -165,7 +165,7 @@
 
 				<section>
 					<h2>Синтаксисы</h2>
-					<img src="images/standards.png" alt="" width="900">
+					<img src="images/standards.png" alt="" width="900" class="fragment">
 				</section>
 
 				<section>
@@ -283,8 +283,7 @@
 				
 
 				<section>
-					<h2>Аналитика</h2>
-					<p>Web data commons</p>
+					<h3>Немного статистики</h3>
 					<img src="images/chart.jpg" alt="">
 				</section>
 
@@ -303,8 +302,8 @@
 					<p>
 						Microdata .. RDFa .. JSON-LD
 					</p>
-					<h3>Так что использовать?</h3>
-					<p>Ориентируйтесь на задачу</p>
+					<h3 class="fragment">Так что использовать?</h3>
+					<p class="fragment">Ориентируйтесь на задачу!</p>
 				</section>
 
 				<section>
@@ -312,7 +311,7 @@
 					<ul>
 						<li>Социальные сети</li>
 						<li>Поисковые сниппеты</li>
-						<li>Разметка в Email</li>
+						<li>Разметка в письмах</li>
 						<li>...</li>
 					</ul>
 				</section>
@@ -323,21 +322,9 @@
 					<p>Мы делимся не ссылками &mdash; мы делимся содержанием</p>
 				</section>
 
-				<section data-background="images/social/vk-preview.jpg"></section>
 				<section data-background="images/social/fb-preview.jpg"></section>
 				<section data-background="images/social/tw-preview.jpg"></section>
-
-				<section>
-					<h2>OpenGraph</h2>
-					<ul>
-						<li>Facebook</li>
-						<li>VK</li>
-						<li>Google +</li>
-						<li>LinkedIn</li>
-						<li>Twitter</li>
-						<li>Pinterest</li>
-					</ul>
-				</section>
+				<section data-background="images/social/vk-preview.jpg"></section>
 
 				<section>
 					<h3>Open Graph</h3>
@@ -379,7 +366,19 @@
   <meta property="og:video:width" content="1280">
   <meta property="og:video:height" content="720">
     </code></pre>
-  			</section>
+  				</section>
+
+  				<section>
+  					<h2>Open Graph</h2>
+  					<ul>
+  						<li>Facebook</li>
+  						<li>VK</li>
+  						<li>Google +</li>
+  						<li>LinkedIn</li>
+  						<li>Twitter</li>
+  						<li>Pinterest</li>
+  					</ul>
+  				</section>
 
 				<section>
 					<h2>Готовьте контент правильно</h2>
@@ -485,30 +484,113 @@
 				</section>
 
 				<section>
-					<h2>Emails</h2>
+					<h2>Разметка в письмах</h2>
 
 					<ul>
-						<li>Google впереди всех</li>
+						<li>Google впереди всех (Gmail / Inbox)</li>
 						<li>Типы с Schema.org</li>
-						<li>Gmail</li>
-						<li>Inbox</li>
 					</ul>
 				</section>
 
 				<section data-background="images/emails/gmail-flight.jpg"></section>
+				<section data-background="images/emails/inbox-flight.jpg"></section>
 
 				<section>
-					<p>CODE</p>
+					<pre class="stretch"><code class="html">
+	<script charset="UTF-8" type="application/ld+json">
+	{
+	  "@context": "http://schema.org",
+	  "@type": "LodgingReservation",
+	  "reservationStatus": "http://schema.org/Confirmed",
+	  "reservationNumber": "995395827",
+	  "reservationFor": {
+	    "@type": "LodgingBusiness",
+	    "name": "Prime Apartments 3",
+	    "address": {
+	      "@type": "PostalAddress",
+	      "addressLocality": "Minsk",
+	      ...
+	    },
+	    "telephone": "+375447000205",
+	    "url": "https://www.booking.com/hotel/by/prime-apartments-3.html?aid=339530",
+	    "contactPoint": ""
+	  },
+	  ...
+	  "checkinDate": "2015-10-30T14:00:00+03:00",
+	  "checkoutDate": "2015-11-02T12:00:00+03:00",
+	  "url": "https://secure.booking.com/myreservations.ru.html?bn=995395827"
+	}
+	</script>
+</code></pre>
 				</section>
 
+				<section data-background="images/emails/inbox-event.jpg"></section>
+
+				<section>
+					<pre class="stretch"><code class="html">
+	<script type="application/ld+json">
+	{
+	  "@context": "http://schema.org",
+	  "@type": "EventReservation",
+	  "reservationNumber": "E123456789",
+	  "reservationStatus": "http://schema.org/Confirmed",
+	  "underName": {"@type": "Person", "name": "Андрей Абрамов"}, 
+
+	  "reservationFor": {
+	    "@type": "Event",
+	    "name": "Web Standards Days",
+	    "startDate": "2015-10-30T09:00:00+03:00",
+	    "location": {
+	      "@type": "Place",
+	      "name": "Лофт-площадка SPACE",
+	      "address": {
+	        "@type": "PostalAddress",
+	        "streetAddress": "Октябрьская ул. 16",
+	        "addressLocality": "Минск",
+	        "addressCountry": "BY"
+	      }
+	    }
+	  },
+	  "numSeats": "1"
+	}
+	</script>
+</code></pre>
+				</section>
+
+				<section>
+					<h3>Actions</h3>
+
+					<img src="images/emails/click-actions.png" alt="" width="300">
+					<img src="images/emails/click-actions-i.png" width="300" alt=""><br>
+					<img src="images/emails/go-actions.png" width="300" alt="">
+					<img src="images/emails/go-actions-i.png" width="300" alt="">
+				</section>
+
+				<section>
+					<h3>О чем рассказать в письме?</h3>
+					<ul>
+						<li>Действия</li>
+						<li>Статьи</li>
+						<li>Заказы</li>
+						<li>События</li>
+						<li>Бронь отеля / авто / ресторана</li>
+					</ul>
+				</section>
+
+				<section>
+					<h3>Инструменты</h3>
+
+					<p>Ссылка</p>
+				</section>
 
 				<section>
 					<h2>Будущее</h2>
 				</section>
 
 				<section>
-					<img src="images/future/apple.png" alt="">
+					<img src="images/future/apple.png" alt="" class="stretch">
 				</section>
+
 				<section>
 					<img src="images/future/apple-2.jpg" alt="">
 				</section>
