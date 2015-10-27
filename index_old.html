@@ -1,0 +1,663 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Robots</title>
+
+		<meta name="author" content="Andrew Abramov">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="node_modules/reveal.js/css/reveal.css">
+		<link rel="stylesheet" href="node_modules/reveal.js/css/theme/black.css" id="theme">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="node_modules/reveal.js/lib/css/zenburn.css">
+
+		<!-- Custom styles -->
+		<link rel="stylesheet" href="styles/timeline.css">
+		<style>
+			.logos {
+				text-align: center;
+			}
+			.logos > img {
+				display: inline-block;
+				max-width: 200px;
+				height: 100px;
+				border: none !important;
+				background: none !important;
+				box-shadow: none !important;
+				margin-right: 20px !important;
+			}
+			.pre .code {
+
+			}
+		</style>
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'node_modules/reveal.js/css/print/pdf.css' : 'node_modules/reveal.js/css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="node_modules/reveal.js/lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+
+				<!-- <section data-background="images/intro.jpg"> -->
+				<section>
+					<h2>Роботы имеют право знать</h2>
+					<h4>(Заметки о Микроразметке)</h4>
+					<img src="images/intro.jpg" alt="" width="600">
+					<p>
+						<small>Андрей Абрамов, <a href="http://www.graph.uk/">Graph.uk</a></small>
+					</p>
+				</section>
+
+				<section>
+					<h3>О чем доклад</h3>
+					<ul>
+						<li>Зачем микроразметка</li>
+						<li>Словари</li>
+						<li>Синтаксисы</li>
+						<li>Примеры использования</li>
+						<li>Инструменты</li>
+						<li>Будущее</li>
+
+						<li style="margin-top: 1em;">
+							<strike>Семантическая верстка</strike><br>
+							<small><a href="http://html5doctor.com/">http://html5doctor.com/</a></small>
+						</li>
+						<li>
+							<strike>SEO</strike><br>
+							<small><a href="http://webstandardsdays.ru/2013/10/26/pres/seonism.pdf">Основы сеонизма</a></small>
+						</li>
+					</ul>
+				</section>
+
+				<section>
+					<p>Зачем нам микроразметка?</p>					
+				</section>
+
+				<section>
+					<p>Мы создаем интерфейсы для людей</p>
+				</section>
+
+				<section data-background="images/interface.jpg"></section>
+				<section data-background="images/interface_fry.jpg"></section>
+
+				<section data-background="images/code.jpg"></section>
+				<section data-background="images/code_bender.jpg"></section>
+
+				<section>
+					<p>Данные в HTML &mdash; не машиночитаемые</p>
+				</section>
+
+				<section>
+					<h3>Кто эти роботы?</h3>
+					<div class="logos">
+						<img src="images/robot-logos/google.svg" alt="">
+						<img src="images/robot-logos/yandex.svg" alt="">
+						<img src="images/robot-logos/bing.svg" alt="">
+						<img src="images/robot-logos/yahoo.svg" alt=""><br>
+						<img src="images/robot-logos/facebook.svg" alt="">
+						<img src="images/robot-logos/vk.svg" alt="">
+						<img src="images/robot-logos/twitter.svg" alt="">
+						<img src="images/robot-logos/linkedin.svg" alt="">
+						<img src="images/robot-logos/pinterest.svg" alt=""><br>
+						<img src="images/robot-logos/gmail.svg" alt="">
+						<img src="images/robot-logos/inbox.png" alt="">
+						<img src="images/robot-logos/slack.png" alt="">
+						<img src="images/robot-logos/telegram.svg" alt="">
+						<!-- <img src="images/robot-logos/siri.svg" alt="">
+						<img src="images/robot-logos/cortana.svg" alt=""> -->
+					</div>
+				</section>
+
+				<section>
+					<h2>Микроразметка</h2>
+				</section>
+
+				<section>
+					<h2>Терминология</h2>
+					<p><mark style="background-color: #86FF26;">Микроразметка</mark> &mdash; семантическая разметка</p>
+					<br>
+
+					<p><mark>Микроформаты</mark> &mdash; инициатива microformats.org</p>
+					<p><mark>Микроданные</mark> &mdash; стандарт HTML5 microdata</p>
+				</section>
+
+				<section>
+					<h2>Микроразметка</h2>
+
+					<ul>
+						<li>Словарь</li>
+						<li>Синтаксис</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Словари</h2>
+
+					<ul class="fragment">
+						<li>Open Graph</li>
+						<li>Schema.org</li>
+						<li>FOAF</li>
+						<li>...</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Синтаксисы</h2>
+					<img src="images/standards.png" alt="" width="900" class="fragment">
+				</section>
+
+				<section>
+					<h2>Синтаксисы</h2>
+					<ul class="timeline">
+						<li class="active">Microformats.org <br> (Tantek Çelik) <br>2006</li>
+						<li class="active">RDFa (W3C) <br> (Mark Birbeck) <br>2008</li>
+						<li class="active">Microdata <br> (Ian Hickson) <br>2009</li>
+						<li class="active">JSON-LD (W3C) <br> (Manu Sporny) <br>2010</li>
+						<li class="active">RDFa Lite (W3C) <br> (Manu Sporny) <br>2012</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Microformats</h2>
+					<pre><code class="html"><div class="vcard">
+  <span class="fn">Mark Watney</span>
+  <div class="org">NASA</div>
+  <a class="email" href="mailto:potatoes@nasa.gov">potatoes@nasa.gov</a>
+  <div class="adr">
+    <span class="country-name">USA</span>
+  </div>
+</div></code></pre>
+				
+				<ul class="timeline">
+					<li class="active">Microformats <br> (Tantek Çelik) <br>2006</li>
+					<li>RDFa <br> (Mark Birbeck) <br>2008</li>
+					<li>Microdata <br> (Ian Hickson) <br>2009</li>
+					<li>JSON-LD <br> (Manu Sporny) <br>2010</li>
+					<li>RDFa Lite <br> (Manu Sporny) <br>2012</li>
+				</ul>
+
+				</section>
+
+				<section>
+					<h2>RDF/a</h2>
+					<pre><code class="html" data-trim><div about="http://dbpedia.org/resource/Albert_Einstein">
+	<span property="foaf:name">Albert Einstein</span>
+	<span property="dbp:dateOfBirth" datatype="xsd:date">1879-03-14</span>
+	<div property="dbp:birthPlace" resource="http://dbpedia.org/resource/German_Empire">
+		<span property="dbp:conventionalLongName">the German Empire</span>
+	</div>
+</div></code></pre>
+
+				<ul class="timeline">
+					<li>Microformats <br> (Tantek Çelik) <br>2006</li>
+					<li class="active">RDFa <br> (Mark Birbeck) <br>2008</li>
+					<li>Microdata <br> (Ian Hickson) <br>2009</li>
+					<li>JSON-LD <br> (Manu Sporny) <br>2010</li>
+					<li>RDFa Lite <br> (Manu Sporny) <br>2012</li>
+				</ul>
+
+				</section>
+
+				<section>
+					<h2>Microdata</h2>
+					<pre><code class="html"><dl itemscope itemtype="http://vocab.example.net/book">
+	<dt>Title
+	<dd itemprop="title">The Reality Dysfunction
+	<dt>Author
+	<dt>Publication date
+	<dd><time itemprop="pubdate" datetime="1996-01-26">26 January 1996</time>
+</dl>
+<div id="author_information" itemprop="author">Peter F. Hamilton</div></code></pre>
+
+				<ul class="timeline">
+					<li>Microformats <br> (Tantek Çelik) <br>2006</li>
+					<li>RDFa <br> (Mark Birbeck) <br>2008</li>
+					<li class="active">Microdata <br> (Ian Hickson) <br>2009</li>
+					<li>JSON-LD <br> (Manu Sporny) <br>2010</li>
+					<li>RDFa Lite <br> (Manu Sporny) <br>2012</li>
+				</ul>
+
+				</section>
+
+				<section>
+					<h2>JSON-LD</h2>
+					<pre><code class="javasctipt">{
+  "@context": "http://json-ld.org/contexts/person.jsonld",
+  "@id": "http://dbpedia.org/resource/John_Lennon",
+  "name": "John Lennon",
+  "born": "1940-10-09",
+  "spouse": "http://dbpedia.org/resource/Cynthia_Lennon"
+}</code></pre>
+
+				<ul class="timeline">
+					<li>Microformats <br> (Tantek Çelik) <br>2006</li>
+					<li>RDFa <br> (Mark Birbeck) <br>2008</li>
+					<li>Microdata <br> (Ian Hickson) <br>2009</li>
+					<li class="active">JSON-LD <br> (Manu Sporny) <br>2010</li>
+					<li>RDFa Lite <br> (Manu Sporny) <br>2012</li>
+				</ul>
+
+				</section>
+				
+
+				<section>
+					<h2>RDF/a Lite</h2>
+					<pre><code class="html"><div property="aggregateRating" typeof="AggregateRating">
+	<span property="ratingValue">87</span>
+	out of <span property="bestRating">100</span>
+	based on <span property="ratingCount">24</span> user ratings
+</div></code></pre>
+
+				<ul class="timeline">
+					<li>Microformats <br> (Tantek Çelik) <br>2006</li>
+					<li>RDFa <br> (Mark Birbeck) <br>2008</li>
+					<li>Microdata <br> (Ian Hickson) <br>2009</li>
+					<li>JSON-LD <br> (Manu Sporny) <br>2010</li>
+					<li class="active">RDFa Lite <br> (Manu Sporny) <br>2012</li>
+				</ul>
+
+				</section>
+
+				
+
+				<section>
+					<h3>Немного статистики</h3>
+					<img src="images/chart.jpg" alt="">
+				</section>
+
+				<section>
+					<h2>Тенденции</h2>
+					<ul>
+						<li>Microformats сходят на нет</li>
+						<li>Microdata - самый поддерживаемый</li>
+						<li>OpenGraph теги - в формате RDFa</li>
+						<li>Google активно внедряет JSON-LD</li>
+						<li>React 0.14 добавил поддержку RDFa</li>
+					</ul>
+				</section>
+
+				<section>
+					<p>
+						Microdata .. RDFa .. JSON-LD
+					</p>
+					<h3 class="fragment">Так что использовать?</h3>
+					<p class="fragment">Ориентируйтесь на задачу!</p>
+				</section>
+
+				<section>
+					<h2>Применение</h2>
+					<ul>
+						<li>Социальные сети</li>
+						<li>Поисковые сниппеты</li>
+						<li>Разметка в письмах</li>
+						<li>...</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Социальные сети</h2>
+					
+					<p>Мы делимся не ссылками &mdash; мы делимся содержанием</p>
+				</section>
+
+				<section data-background="images/social/fb-preview.jpg"></section>
+				<section data-background="images/social/tw-preview.jpg"></section>
+				<section data-background="images/social/vk-preview.jpg"></section>
+
+				<section>
+					<h3>Open Graph</h3>
+					<pre><code class="html">&lt;html prefix="og: http://ogp.me/ns#"&gt;
+  &lt;head&gt;
+    <meta charset=utf-8>
+    <title>Продаю Звезду Cмерти</title>
+
+    <meta property="og:title" content="Звезда смерти" />
+    <meta property="og:url" content="http://bonifaty.github.io/examples/opengraph/" />
+    <meta property="og:description" content="Звезда смерти. Недорого, в отиличном состоянии.." />
+
+    <meta property="og:image" content="http://bonifaty.github.io/examples/opengraph/deathstar.jpg" />
+    <meta property="og:image:width" content="600" />
+    <meta property="og:image:height" content="600" />
+
+    <meta name="twitter:card" content="summary" />
+  &lt;/head&gt;
+&lt;/html&gt;</code></pre>
+				</section>
+
+				<section data-background="images/social/video.jpg"></section>
+
+				<section>
+					<h3>Описывайте объекты</h3>
+
+					<pre><code>
+  <meta property="og:type" content="video">
+
+  <meta property="og:video:url" content="https://www.youtube.com/embed/vSZAkf_VpS0">
+  <meta property="og:video:secure_url" content="https://www.youtube.com/embed/vSZAkf_VpS0">
+  <meta property="og:video:type" content="text/html">
+  <meta property="og:video:width" content="1280">
+  <meta property="og:video:height" content="720">
+
+  <meta property="og:video:url" content="http://www.youtube.com/v/vSZAkf_VpS0?version=3">
+  <meta property="og:video:secure_url" content="https://www.youtube.com/v/vSZAkf_VpS0?version=3">
+  <meta property="og:video:type" content="application/x-shockwave-flash">
+  <meta property="og:video:width" content="1280">
+  <meta property="og:video:height" content="720">
+    </code></pre>
+  				</section>
+
+  				<section>
+  					<h2>Open Graph</h2>
+  					<ul>
+  						<li>Facebook</li>
+  						<li>VK</li>
+  						<li>Google +</li>
+  						<li>LinkedIn</li>
+  						<li>Twitter</li>
+  						<li>Pinterest</li>
+  					</ul>
+  				</section>
+
+				<section>
+					<h2>Готовьте контент правильно</h2>
+					<ul>
+						<li>Ограничения на длину(VK - 101 / FB - 155)</li> 
+						<li>Пропорции изображений</li>
+						<li>Спецсимволы</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Поисковики</h2>
+				</section>
+
+				<section>
+					<h2>Словарь Schema.org</h2>
+					<ul>
+						<li>Bing</li>
+						<li>Google</li>
+						<li>Yahoo!</li>
+						<li>Yandex</li>
+					</ul>
+				</section>
+
+				<section data-background="images/search/schemaorg.jpg"></section>
+
+				<section>
+					<h2>Поисковые сниппеты</h2>
+				</section>
+
+				<section>
+					<h3>1998</h3>
+					<img src="images/search/google-1998.jpg" alt="" class="stretch">
+				</section>
+
+				<section data-background="images/search/yandex-martianin.jpg"></section>
+				<section data-background="images/search/bing-norway.jpg"></section>
+				<section data-background="images/search/google-lasagna.jpg"></section>
+
+				<section data-background="images/search/google-lasagna_s.jpg">
+					<br>
+					<br>
+					<h2>Это сниппет</h2>
+				</section>
+
+				<section>
+					<h2>Рецепт</h2>
+					<img src="images/search/recipe.jpg" alt="">
+					<pre><code class="html"><div itemscope itemtype="http://schema.org/Recipe">
+  <img itemprop="image" src="lasagna.jpg" />
+  <h1 itemprop="name">Absolute Best Ever Lasagna</h1>
+  <p itemprop="description">My family's favorite. This is a very meaty lasagna...</p>
+  <span itemprop="ingredients">12-15 lasagna noodles</span>
+  <span itemprop="ingredients">1/2 cup grated parmesan cheese</span>
+  <meta itemprop="totalTime" content="PT2H30M" />
+  <div itemscope 
+     itemprop="nutrition" 
+     itemtype="http://schema.org/NutritionInformation">
+    <span itemprop="calories">497.6</span>
+  </div>
+  <div itemscope 
+     itemprop="aggregateRating" 
+     itemtype="http://schema.org/AggregateRating">
+    Rating: <span itemprop="ratingValue">5.0</span><br>
+    Reviews: <span itemprop="reviewCount">504</span>
+  </div>
+</div></code></pre>
+				</section>
+				
+				<section>
+					<h3>О чем рассказать поисковику?</h3>
+					<ul>
+						<li>Рецепт</li>
+						<li>Рейтинг</li>
+						<li>Товар</li>
+						<li>Событие</li>
+						<li>Приложение</li>
+						<li>Видео</li>
+						<li>Статья</li>
+						<li>Хлебные крошки</li>
+					</ul>
+				</section>
+
+				<section>
+					<p>..а еще Google умеет вот так</p>
+
+					<img src="images/search/google-search.jpg" alt="" height="300">
+
+					<pre class="fragment"><code class="html"><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "WebSite",
+  "url": "https://www.cpubenchmark.net",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://www.cpubenchmark.net/search/zoomsearch.php?q={search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
+}
+</script></code></pre>
+
+
+				</section>
+
+				<section>
+					<h2>Разметка в письмах</h2>
+
+					<ul>
+						<li>Google впереди всех (Gmail / Inbox)</li>
+						<li>Типы с Schema.org</li>
+					</ul>
+				</section>
+
+				<section data-background="images/emails/gmail-flight.jpg"></section>
+				<section data-background="images/emails/inbox-flight.jpg"></section>
+
+				<section>
+					<pre class="stretch"><code class="html">
+	<script charset="UTF-8" type="application/ld+json">
+	{
+	  "@context": "http://schema.org",
+	  "@type": "LodgingReservation",
+	  "reservationStatus": "http://schema.org/Confirmed",
+	  "reservationNumber": "995395827",
+	  "reservationFor": {
+	    "@type": "LodgingBusiness",
+	    "name": "Prime Apartments 3",
+	    "address": {
+	      "@type": "PostalAddress",
+	      "addressLocality": "Minsk",
+	      ...
+	    },
+	    "telephone": "+375447000205",
+	    "url": "https://www.booking.com/hotel/by/prime-apartments-3.html?aid=339530",
+	    "contactPoint": ""
+	  },
+	  ...
+	  "checkinDate": "2015-10-30T14:00:00+03:00",
+	  "checkoutDate": "2015-11-02T12:00:00+03:00",
+	  "url": "https://secure.booking.com/myreservations.ru.html?bn=995395827"
+	}
+	</script>
+</code></pre>
+				</section>
+
+				<section data-background="images/emails/inbox-event.jpg"></section>
+
+				<section>
+					<pre class="stretch"><code class="html">
+	<script type="application/ld+json">
+	{
+	  "@context": "http://schema.org",
+	  "@type": "EventReservation",
+	  "reservationNumber": "E123456789",
+	  "reservationStatus": "http://schema.org/Confirmed",
+	  "underName": {"@type": "Person", "name": "Андрей Абрамов"}, 
+
+	  "reservationFor": {
+	    "@type": "Event",
+	    "name": "Web Standards Days",
+	    "startDate": "2015-10-30T09:00:00+03:00",
+	    "location": {
+	      "@type": "Place",
+	      "name": "Лофт-площадка SPACE",
+	      "address": {
+	        "@type": "PostalAddress",
+	        "streetAddress": "Октябрьская ул. 16",
+	        "addressLocality": "Минск",
+	        "addressCountry": "BY"
+	      }
+	    }
+	  },
+	  "numSeats": "1"
+	}
+	</script>
+</code></pre>
+				</section>
+
+				<section>
+					<h3>Actions</h3>
+
+					<img src="images/emails/click-actions.png" alt="" width="300">
+					<img src="images/emails/click-actions-i.png" width="300" alt=""><br>
+					<img src="images/emails/go-actions.png" width="300" alt="">
+					<img src="images/emails/go-actions-i.png" width="300" alt="">
+				</section>
+
+				<section>
+					<h3>О чем рассказать в письме?</h3>
+					<ul>
+						<li>Действия</li>
+						<li>Статьи</li>
+						<li>Заказы</li>
+						<li>События</li>
+						<li>Бронь отеля / авто / ресторана</li>
+					</ul>
+				</section>
+
+				<section>
+					<h3>Инструменты</h3>
+
+					<p>Ссылка</p>
+				</section>
+
+				<section>
+					<h2>Будущее</h2>
+
+					<img src="images/future/intro.jpg" alt="" class="stretch">
+				</section>
+
+				<section>
+					<img src="images/future/google-now.png" alt="" class="stretch">
+				</section>
+
+				<section>
+					<img src="images/future/apple.png" alt="" class="stretch">
+				</section>
+
+				<section>
+					<img src="images/future/apple-2.jpg" alt="">
+				</section>
+
+				<section>
+					<img src="images/future/cortana3.png" alt="">
+					<img src="images/future/cortana2.png" alt="">
+					<img src="images/future/cortana.png" alt="">
+				</section>
+
+				<section>
+					<h3>Будущее</h3>
+					<ul>
+						<li>Google Now / Siri / Cortana</li>
+						<li>Интернет вещей</li>
+						<li>Evernote как хранилище объектов</li>
+						<li>Больше действий к объектам</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Спасибо!</h2>
+				</section>
+				
+			</div>
+
+		</div>
+
+		<script src="node_modules/reveal.js/lib/js/head.min.js"></script>
+		<script src="node_modules/reveal.js/js/reveal.js"></script>
+
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: false,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'none', // none/fade/slide/convex/concave/zoom
+
+				width: 1366,
+				height: 768,
+
+				// Factor of the display size that should remain empty around the content
+				margin: 0.1,
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: 'node_modules/reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'node_modules/reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'node_modules/reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'node_modules/reveal.js/plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'node_modules/reveal.js/plugin/zoom-js/zoom.js', async: true },
+					{ src: 'node_modules/reveal.js/plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>

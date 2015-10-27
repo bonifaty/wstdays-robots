@@ -1,8 +1,9 @@
 {
   "name": "robots_wdc",
   "description": "Presentation for WSD 2015 Minsk",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "dependencies": {
-    "reveal.js": "^3.1.0"
+    "shower-core": "^1.0.7",
+    "shower-ribbon": "^1.0.11"
   }
 }
