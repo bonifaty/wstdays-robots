@@ -5,16 +5,20 @@ ul.timeline {
 	margin-top: 2em;
 }
 
-.timeline > li {
-	list-style: none;
+.slide .timeline > li {
+	width: 25%;
 	float: left;
-	margin-left: 50px;
-	opacity: 0.4;
-	font-size: 28px;
+	text-indent: 0;
+	text-align: center;
 }
 
-.timeline > li.active {
-	opacity: 1;
+.slide .timeline > li:before {
+	display: none;
+}
+
+.timeline img {
+	width: 60%;
+	margin-top: 20px;
 }
 
 .timeline > li:before {
