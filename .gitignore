@@ -1,3 +1,4 @@
 node_modules
 !node_modules/shower-ribbon/styles/screen.css
+!node_modules/shower-ribbon/fonts
 !node_modules/shower-core/shower.min.js
