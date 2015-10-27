@@ -10,17 +10,24 @@
 	<!-- Custom styles -->
 	<link rel="stylesheet" href="styles/timeline.css">
 	<style>
+		.intro h2 {
+			font-size: 78px;
+			margin-top: 173px;
+			line-height: 98px;
+			margin-bottom: 52px;
+		}
+		.intro:after {
+			display: none;
+		}
 		.logos {
 			text-align: center;
 		}
 		.logos > img {
 			display: inline-block;
-			max-width: 200px;
-			height: 100px;
+			max-width: 160px;
+			height: 70px;
 			margin-right: 20px;
-		}
-		.pre .code {
-
+			margin-top: 20px;
 		}
 	</style>
 </head>
@@ -29,11 +36,11 @@
 		Debug class on <body> enables
 		cyan grid on slides
 		-->
-					<section class="slide"><div>
+					<section class="slide intro"><div>
+						<!-- <img src="images/intro.jpg" alt="" width="600" class="place t r"> -->
 						<h2>Роботы имеют право знать</h2>
-						<h4>(Заметки о Микроразметке)</h4>
-						<img src="images/intro.jpg" alt="" width="600">
 						<p>
+							<i>Заметки о Микроразметке</i><br>
 							<small>Андрей Абрамов, <a href="http://www.graph.uk/">Graph.uk</a></small>
 						</p>
 					</div></section>
@@ -42,43 +49,50 @@
 						<h2>О чем доклад</h2>
 						<ul>
 							<li>Зачем микроразметка</li>
-							<li>Словари</li>
-							<li>Синтаксисы</li>
+							<li>Словари и синтаксисы</li>
 							<li>Примеры использования</li>
 							<li>Инструменты</li>
 							<li>Будущее</li>
 
-							<li style="margin-top: 1em;">
-								<strike>Семантическая верстка</strike><br>
-								<small><a href="http://html5doctor.com/">http://html5doctor.com/</a></small>
+							<li>
+								<strike>Семантическая верстка</strike> <small><a href="http://html5doctor.com/">http://html5doctor.com/</a></small>
 							</li>
 							<li>
-								<strike>SEO</strike><br>
-								<small><a href="http://webstandardsdays.ru/2013/10/26/pres/seonism.pdf">Основы сеонизма</a></small>
+								<strike>SEO</strike> <small><a href="http://webstandardsdays.ru/2013/10/26/pres/seonism.pdf">Основы СЕОнизма</a></small>
 							</li>
 						</ul>
 					</div></section>
 
-					<section class="slide"><div>
-						<p>Зачем нам микроразметка?</p>					
+					<!-- <section class="slide shout"><div>
+						<h2>Зачем нам микроразметка?</h2>					
+					</div></section> -->
+
+					<section class="slide shout"><div>
+						<h2>Интерфейсы <br>для людей</h2>
 					</div></section>
 
-					<section class="slide"><div>
-						<p>Мы создаем интерфейсы для людей</p>
+					<section class="slide cover w">
+						<img src="images/interface.jpg" alt="">
+					</section>
+
+					<section class="slide cover w">
+						<img src="images/interface_fry.jpg" alt="">
+					</section>
+
+					<section class="slide shout"><div>
+						<h2>Роботы ничего понимают</h2>
 					</div></section>
 
-					<section data-background="images/interface.jpg"></section></section>
-					<section data-background="images/interface_fry.jpg"></section></section>
+					<section class="slide cover w">
+						<img src="images/code.jpg" alt="">
+					</section>
 
-					<section data-background="images/code.jpg"></section></section>
-					<section data-background="images/code_bender.jpg"></section></section>
-
-					<section class="slide"><div>
-						<p>Данные в HTML &mdash; не машиночитаемые</p>
-					</div></section>
+					<section class="slide cover w">
+						<img src="images/code_bender.jpg" alt="">
+					</section>
 
 					<section class="slide"><div>
-						<h2>Кто эти роботы?</h2>
+						<h2>Какие роботы?</h2>
 						<div class="logos">
 							<img src="images/robot-logos/google.svg" alt="">
 							<img src="images/robot-logos/yandex.svg" alt="">
@@ -98,42 +112,42 @@
 						</div>
 					</div></section>
 
-					<section class="slide"><div>
-						<h2>Микроразметка</h2>
+					<section class="slide shout"><div>
+						<h2>Что делать?</h2>
+					</div></section>
+
+					<section class="slide shout"><div>
+						<h2>Микроразметка!</h2>
 					</div></section>
 
 					<section class="slide"><div>
 						<h2>Терминология</h2>
-						<p><mark style="background-color: #86FF26;">Микроразметка</mark> &mdash; семантическая разметка</p>
+						<p><mark style="background-color: #86FF26;">Микроразметка</mark> &mdash; семантическая разметка
 						<br>
 
-						<p><mark>Микроформаты</mark> &mdash; инициатива microformats.org</p>
-						<p><mark>Микроданные</mark> &mdash; стандарт HTML5 microdata</p>
+						<mark>Микроформаты</mark> &mdash; инициатива microformats.org<br>
+						<mark>Микроданные</mark> &mdash; стандарт HTML5 microdata</p>
 					</div></section>
 
 					<section class="slide"><div>
-						<h2>Микроразметка</h2>
+						<h2>Микроразметка?</h2>
 
 						<ul>
 							<li>Словарь</li>
 							<li>Синтаксис</li>
+							<li>(Пример кода)</li>
 						</ul>
 					</div></section>
 
 					<section class="slide"><div>
 						<h2>Словари</h2>
 
-						<ul class="fragment">
+						<ul>
 							<li>Open Graph</li>
 							<li>Schema.org</li>
 							<li>FOAF</li>
 							<li>...</li>
 						</ul>
-					</div></section>
-
-					<section class="slide"><div>
-						<h2>Синтаксисы</h2>
-						<img src="images/standards.png" alt="" width="900" class="fragment">
 					</div></section>
 
 					<section class="slide"><div>
@@ -145,6 +159,11 @@
 							<li class="active">JSON-LD (W3C) <br> (Manu Sporny) <br>2010</li>
 							<li class="active">RDFa Lite (W3C) <br> (Manu Sporny) <br>2012</li>
 						</ul>
+					</div></section>
+
+					<section class="slide"><div>
+						<h2>Почему синтаксисов так много?</h2>
+						<img src="images/standards.jpg" alt="" width="500">
 					</div></section>
 
 					<section class="slide"><div>
@@ -248,13 +267,6 @@
 
 					</div></section>
 
-					
-
-					<section class="slide"><div>
-						<h2>Немного статистики</h2>
-						<img src="images/chart.jpg" alt="">
-					</div></section>
-
 					<section class="slide"><div>
 						<h2>Тенденции</h2>
 						<ul>
@@ -265,17 +277,18 @@
 							<li>React 0.14 добавил поддержку RDFa</li>
 						</ul>
 					</div></section>
-
+				
 					<section class="slide"><div>
-						<p>
-							Microdata .. RDFa .. JSON-LD
-						</p>
-						<h3 class="fragment">Так что использовать?</h2>
-						<p class="fragment">Ориентируйтесь на задачу!</p>
+						<h2>Немного статистики</h2>
+						<img src="images/chart.jpg" alt="">
+					</div></section>
+
+					<section class="slide shout"><div>
+						<h2>RDFa vs Microdata</h2>
 					</div></section>
 
 					<section class="slide"><div>
-						<h2>Применение</h2>
+						<h2>Примеры использования</h2>
 						<ul>
 							<li>Социальные сети</li>
 							<li>Поисковые сниппеты</li>
@@ -284,15 +297,25 @@
 						</ul>
 					</div></section>
 
-					<section class="slide"><div>
+					<section class="slide shout"><div>
+						<h2>Социальные сети</h2>
+					</div></section>
+
+					<!-- <section class="slide"><div>
 						<h2>Социальные сети</h2>
 						
 						<p>Мы делимся не ссылками &mdash; мы делимся содержанием</p>
-					</div></section>
+					</div></section> -->
 
-					<section data-background="images/social/fb-preview.jpg"></section></section>
-					<section data-background="images/social/tw-preview.jpg"></section></section>
-					<section data-background="images/social/vk-preview.jpg"></section></section>
+					<section class="slide cover w">
+						<img src="images/social/fb-preview.jpg" alt="">
+					</section>
+					<section class="slide cover w">
+						<img src="images/social/tw-preview.jpg" alt="">
+					</section>
+					<section class="slide cover w">
+						<img src="images/social/vk-preview.jpg" alt="">
+					</section>
 
 					<section class="slide"><div>
 						<h2>Open Graph</h2>
@@ -314,7 +337,9 @@
 	&lt;/html&gt;</code></pre>
 		</div></section>
 
-		<section data-background="images/social/video.jpg"></section></section>
+		<section class="slide cover w">
+			<img src="images/social/video.jpg" alt="">
+		</section>
 
 					<section class="slide"><div>
 						<h2>Описывайте объекты</h2>
@@ -357,7 +382,7 @@
 						</ul>
 					</div></section>
 
-					<section class="slide"><div>
+					<section class="slide shout"><div>
 						<h2>Поисковики</h2>
 					</div></section>
 
@@ -371,26 +396,34 @@
 						</ul>
 					</div></section>
 
-					<section data-background="images/search/schemaorg.jpg"></section></section>
+					<section class="slide cover w">
+						<img src="images/search/schemaorg.jpg" alt="">
+					</section>
 
 					<section class="slide"><div>
 						<h2>Поисковые сниппеты</h2>
 					</div></section>
 
-					<section class="slide"><div>
-						<h2>1998</h2>
-						<img src="images/search/google-1998.jpg" alt="" class="stretch">
-					</div></section>
+					<section class="slide cover h">
+						<img src="images/search/google-1998.jpg" alt="">
+					</section>
 
-					<section data-background="images/search/yandex-martianin.jpg"></section></section>
-					<section data-background="images/search/bing-norway.jpg"></section></section>
-					<section data-background="images/search/google-lasagna.jpg"></section></section>
+					<section class="slide cover w">
+						<img src="images/search/yandex-martianin.jpg" alt="">
+					</section>
 
-					<section data-background="images/search/google-lasagna_s.jpg">
-						<br>
-						<br>
-						<h2>Это сниппет</h2>
-					</section></section>
+					<section class="slide cover w">
+						<img src="images/search/bing-norway.jpg" alt="">
+					</section>
+
+					<section class="slide cover w">
+						<img src="images/search/google-lasagna.jpg" alt="">
+					</section>
+
+					<section class="slide shout cover w">
+						<img src="images/search/google-lasagna_s.jpg" alt="">
+						<h2 style="color: #fff;">Это сниппет</h2>
+					</section>
 
 					<section class="slide"><div>
 						<h2>Рецепт</h2>
@@ -430,26 +463,26 @@
 						</ul>
 					</div></section>
 
-					<section class="slide"><div>
+					<!-- <section class="slide"><div>
 						<p>..а еще Google умеет вот так</p>
-
+					
 						<img src="images/search/google-search.jpg" alt="" height="300">
-
-						<pre class="fragment"><code class="html"><script type="application/ld+json">
-	{
-	  "@context": "http://schema.org",
-	  "@type": "WebSite",
-	  "url": "https://www.cpubenchmark.net",
-	  "potentialAction": {
-	    "@type": "SearchAction",
-	    "target": "https://www.cpubenchmark.net/search/zoomsearch.php?q={search_term_string}",
-	    "query-input": "required name=search_term_string"
-	  }
-	}
-	</script></code></pre>
-
-
-		</div></section>
+					
+						<pre><code class="html"><script type="application/ld+json">
+						{
+						  "@context": "http://schema.org",
+						  "@type": "WebSite",
+						  "url": "https://www.cpubenchmark.net",
+						  "potentialAction": {
+						    "@type": "SearchAction",
+						    "target": "https://www.cpubenchmark.net/search/zoomsearch.php?q={search_term_string}",
+						    "query-input": "required name=search_term_string"
+						  }
+						}
+						</script></code></pre>
+					
+					
+							</div></section> -->
 
 					<section class="slide"><div>
 						<h2>Разметка в письмах</h2>
@@ -460,8 +493,13 @@
 						</ul>
 					</div></section>
 
-					<section data-background="images/emails/gmail-flight.jpg"></section></section>
-					<section data-background="images/emails/inbox-flight.jpg"></section></section>
+					<section class="slide cover w">
+						<img src="images/emails/gmail-flight.jpg" alt="">
+					</section>
+
+					<section class="slide cover w">
+						<img src="images/emails/inbox-flight.jpg" alt="">
+					</section>
 
 					<section class="slide"><div>
 						<pre class="stretch"><code class="html">
@@ -491,8 +529,10 @@
 		</script>
 	</code></pre>
 		</div></section>
-
-		<section data-background="images/emails/inbox-event.jpg"></section></section>
+		
+		<section class="slide cover w">
+			<img src="images/emails/inbox-event.jpg" alt="">
+		</section>
 
 					<section class="slide"><div>
 						<pre class="stretch"><code class="html">
@@ -528,10 +568,10 @@
 					<section class="slide"><div>
 						<h2>Actions</h2>
 
-						<img src="images/emails/click-actions.png" alt="" width="300">
-						<img src="images/emails/click-actions-i.png" width="300" alt=""><br>
-						<img src="images/emails/go-actions.png" width="300" alt="">
-						<img src="images/emails/go-actions-i.png" width="300" alt="">
+						<img src="images/emails/click-actions.png" alt="" width="200">
+						<img src="images/emails/click-actions-i.png" width="200" alt=""><br>
+						<img src="images/emails/go-actions.png" width="200" alt="">
+						<img src="images/emails/go-actions-i.png" width="200" alt="">
 					</div></section>
 
 					<section class="slide"><div>
@@ -557,15 +597,15 @@
 						<img src="images/future/intro.jpg" alt="" class="stretch">
 					</div></section>
 
-					<section class="slide"><div>
+					<section class="slide cover w"><div>
 						<img src="images/future/google-now.png" alt="" class="stretch">
 					</div></section>
 
-					<section class="slide"><div>
+					<section class="slide cover h"><div>
 						<img src="images/future/apple.png" alt="" class="stretch">
 					</div></section>
 
-					<section class="slide"><div>
+					<section class="slide cover w"><div>
 						<img src="images/future/apple-2.jpg" alt="">
 					</div></section>
 
@@ -585,7 +625,7 @@
 						</ul>
 					</div></section>
 
-					<section class="slide"><div>
+					<section class="slide shout"><div>
 						<h2>Спасибо!</h2>
 					</div></section>
 
