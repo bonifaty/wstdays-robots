@@ -392,7 +392,7 @@
         <div>
             <h2>Готовьте контент правильно</h2>
             <ul>
-                <li>Ограничения на длину(VK - 101 / FB - 155)</li>
+                <li>Ограничения на длину</li>
                 <li>Пропорции изображений</li>
                 <li>Спецсимволы</li>
             </ul>
@@ -400,7 +400,7 @@
     </section>
     <section class="slide shout">
         <div>
-            <h2>Поисковики</h2>
+            <h2>Поисковые сниппеты</h2>
         </div>
     </section>
     <section class="slide">
@@ -417,12 +417,7 @@
     <section class="slide cover w">
         <img src="images/search/schemaorg.jpg" alt="">
     </section>
-    <section class="slide">
-        <div>
-            <h2>Поисковые сниппеты</h2>
-        </div>
-    </section>
-    <section class="slide cover h">
+    <section class="slide cover w">
         <img src="images/search/google-1998.jpg" alt="">
     </section>
     <section class="slide cover w">
@@ -440,27 +435,23 @@
     </section>
     <section class="slide">
         <div>
-            <h2>Рецепт</h2>
-            <img src="images/search/recipe.jpg" alt="">
-            <pre><code class="html"><div itemscope itemtype="http://schema.org/Recipe">
-	  <img itemprop="image" src="lasagna.jpg" />
-	  <h1 itemprop="name">Absolute Best Ever Lasagna</h1>
-	  <p itemprop="description">My family's favorite. This is a very meaty lasagna...</p>
-	  <span itemprop="ingredients">12-15 lasagna noodles</span>
-	  <span itemprop="ingredients">1/2 cup grated parmesan cheese</span>
-	  <meta itemprop="totalTime" content="PT2H30M" />
-	  <div itemscope 
-	     itemprop="nutrition" 
-	     itemtype="http://schema.org/NutritionInformation">
-	    <span itemprop="calories">497.6</span>
-	  </div>
-	  <div itemscope 
-	     itemprop="aggregateRating" 
-	     itemtype="http://schema.org/AggregateRating">
-	    Rating: <span itemprop="ratingValue">5.0</span><br>
-	    Reviews: <span itemprop="reviewCount">504</span>
-	  </div>
-	</div></code></pre>
+            <h2>Сниппет рецепта</h2>
+            <img src="images/search/recipe.jpg" alt="">            
+        </div>
+    </section>
+    <section class="slide">
+        <div>
+            <h2>Cниппет рецепта</h2>
+            <pre>
+                <code>&lt;div itemscope itemtype="<mark class="important">http://schema.org/Recipe</mark>"&gt;</code>
+                <code>  &lt;h1 itemprop="<mark>name</mark>"&gt;Absolute Best Ever Lasagna&lt;/h1&gt;</code>
+                <code>  &lt;p itemprop="<mark>description</mark>"&gt;My family's favorite&hellip;&lt;/p&gt;</code>
+                <code>  &lt;div itemscope itemprop="<mark>aggregateRating</mark>" </code>
+                <code>       itemtype="<mark class="important">http://schema.org/AggregateRating</mark>"&gt;</code>
+                <code>    Rating: &lt;span itemprop="<mark>ratingValue</mark>"&gt;5.0&lt;/span&gt;</code>
+                <code>  &lt;/div&gt;</code>
+                <code>&lt;/div&gt;</code>
+            </pre>
         </div>
     </section>
     <section class="slide">
@@ -468,16 +459,25 @@
             <h2>О чем рассказать поисковику?</h2>
             <ul>
                 <li>Рецепт</li>
-                <li>Рейтинг</li>
                 <li>Товар</li>
                 <li>Событие</li>
                 <li>Приложение</li>
                 <li>Видео</li>
                 <li>Статья</li>
-                <li>Хлебные крошки</li>
             </ul>
         </div>
     </section>
+
+    <!-- <section class="slide">
+        <div>
+            <h2>Что можно добавить в сниппет?</h2>
+            <ul>
+                <li>Хлебные крошки</li>
+                <li>Рейтинг</li>
+                <li>Панель поиска</li>
+            </ul>
+        </div>
+    </section> -->
     <!-- <section class="slide"><div>
 						<p>..а еще Google умеет вот так</p>
 					
