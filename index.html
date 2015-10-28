@@ -255,12 +255,12 @@
         <div>
             <h2>JSON-LD</h2>
             <pre>
-	            <code>&lt;script type="application/ld+json"&gt;</code>
+	            <code>&lt;script type="<mark>application/ld+json</mark>"&gt;</code>
 	            <code>  {</code>
-	            <code>    "@context": "http://schema.org/",</code>
-	            <code>    "@type": "Car",</code>
-	            <code>    "name": "Tesla model S",</code>
-	            <code>    "fuelType": "Electricity"</code>
+	            <code>    "<mark>@context</mark>": "http://schema.org/",</code>
+	            <code>    "<mark>@type</mark>": "Car",</code>
+	            <code>    "<mark>name</mark>": "Tesla Model S",</code>
+	            <code>    "<mark>fuelType</mark>": "Electricity"</code>
 	            <code>  }	</code>
 	            <code>&lt;/script&gt;</code>
 			</pre>
@@ -287,9 +287,18 @@
     </section>
     <section class="slide shout">
         <div>
-            <h2>RDFa vs Microdata</h2>
+            <h2>RDFa <br> vs <br> Microdata?</h2>
         </div>
     </section>
+
+    <section class="slide shout">
+        <div>
+            <h2>
+                <a href="http://www.jenitennison.com/2011/08/20/microdata-and-rdfa-living-together-in-harmony.html">RDFa + Microdata!</a>
+            </h2>
+        </div>
+    </section>
+
     <section class="slide">
         <div>
             <h2>Примеры использования</h2>
@@ -317,51 +326,53 @@
     <section class="slide cover w">
         <img src="images/social/tw-preview.jpg" alt="">
     </section>
-    <section class="slide cover w">
+    <!-- <section class="slide cover w">
         <img src="images/social/vk-preview.jpg" alt="">
-    </section>
+    </section> -->
+
     <section class="slide">
         <div>
             <h2>Open Graph</h2>
-            <pre><code class="html">&lt;html prefix="og: http://ogp.me/ns#"&gt;
-	  &lt;head&gt;
-	    <meta charset=utf-8>
-	    <title>Продаю Звезду Cмерти</title>
-
-	    <meta property="og:title" content="Звезда смерти" />
-	    <meta property="og:url" content="http://bonifaty.github.io/examples/opengraph/" />
-	    <meta property="og:description" content="Звезда смерти. Недорого, в отиличном состоянии.." />
-
-	    <meta property="og:image" content="http://bonifaty.github.io/examples/opengraph/deathstar.jpg" />
-	    <meta property="og:image:width" content="600" />
-	    <meta property="og:image:height" content="600" />
-
-	    <meta name="twitter:card" content="summary" />
-	  &lt;/head&gt;
-	&lt;/html&gt;</code></pre>
+            <pre>
+                <code>&lt;html <mark>prefix</mark>="og: http://ogp.me/ns#"&gt;</code>
+                <code>  &lt;meta property="<mark>og:title</mark>" content="Звезда смерти" /&gt;</code>
+                <code>  &lt;meta property="<mark>og:url</mark>" content="http://bit.ly/&hellip;" /&gt;</code>
+                <code>  &lt;meta property="<mark>og:description</mark>" content="Описание&hellip;" /&gt;</code>
+                <code>  &lt;meta property="<mark>og:image</mark>" content="http://&hellip;/image.jpg" /&gt;</code>
+                <code>  &lt;meta name="<mark>twitter:card</mark>" content="summary" /&gt;</code>
+                <code>  &hellip;</code>
+            </pre>
         </div>
     </section>
+
+    <section class="slide">
+        <div>
+            <h2>Размеры изображений</h2>
+            <pre>
+                <code>&hellip;</code>
+                <code>&lt;meta property="<mark>og:image</mark>" content="http://&hellip;/image.jpg" /&gt;</code>
+                <code>&lt;meta property="<mark>og:image:width</mark>" content="600" /&gt;</code>
+                <code>&lt;meta property="<mark>og:image:height</mark>" content="600" /&gt;</code>
+                <code>&hellip;</code>
+            </pre>
+        </div>
+    </section>
+
     <section class="slide cover w">
         <img src="images/social/video.jpg" alt="">
     </section>
     <section class="slide">
         <div>
             <h2>Описывайте объекты</h2>
-            <pre><code>
-	  <meta property="og:type" content="video">
-
-	  <meta property="og:video:url" content="https://www.youtube.com/embed/vSZAkf_VpS0">
-	  <meta property="og:video:secure_url" content="https://www.youtube.com/embed/vSZAkf_VpS0">
-	  <meta property="og:video:type" content="text/html">
-	  <meta property="og:video:width" content="1280">
-	  <meta property="og:video:height" content="720">
-
-	  <meta property="og:video:url" content="http://www.youtube.com/v/vSZAkf_VpS0?version=3">
-	  <meta property="og:video:secure_url" content="https://www.youtube.com/v/vSZAkf_VpS0?version=3">
-	  <meta property="og:video:type" content="application/x-shockwave-flash">
-	  <meta property="og:video:width" content="1280">
-	  <meta property="og:video:height" content="720">
-	    </code></pre>
+            <pre>
+                <code>&hellip;</code>
+                <code>&lt;meta property="<mark>og:type</mark>" content="video" /&gt;</code>
+                <code>&lt;meta property="<mark>og:video:url</mark>" content="https://&hellip;" /&gt;</code>
+                <code>&lt;meta property="<mark>og:video:type</mark>" content="text/html" /&gt;</code>
+                <code>&lt;meta property="<mark>og:video:width</mark>" content="1280" /&gt;</code>
+                <code>&lt;meta property="<mark>og:video:height</mark>" content="720" /&gt;</code>
+                <code>&hellip;</code>
+            </pre>
         </div>
     </section>
     <section class="slide">
