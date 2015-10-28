@@ -101,7 +101,7 @@
     </section>
     <section class="slide shout">
         <div>
-            <h2>Роботы ничего понимают</h2>
+            <h2>Роботы ничего <br> не понимают</h2>
         </div>
     </section>
     <section class="slide">
@@ -179,28 +179,28 @@
                     MICROFORMATS
                     <br>
                     <img src="images/formats/microformats.png">
-                    <br> (Tantek Çelik)
+                    <br> Tantek Çelik
                     <br> 2006
                 </li>
                 <li>
                     RDFA
                     <br>
                     <img src="images/formats/rdfa.png">
-                    <br> (Mark Birbeck)
+                    <br> Mark Birbeck
                     <br> 2008
                 </li>
                 <li>
                     MICRODATA
                     <br>
                     <img src="images/formats/microdata.png">
-                    <br> (Ian Hickson)
+                    <br> Ian Hickson
                     <br> 2009
                 </li>
                 <li>
                     JSON-LD
                     <br>
                     <img src="images/formats/json-ld.png">
-                    <br> (Manu Sporny)
+                    <br> Manu Sporny
                     <br> 2010
                 </li>
             </ul>
@@ -294,7 +294,7 @@
     <section class="slide shout">
         <div>
             <h2>
-                <a href="http://www.jenitennison.com/2011/08/20/microdata-and-rdfa-living-together-in-harmony.html">RDFa + Microdata!</a>
+                <a target="_blank" href="http://www.jenitennison.com/2011/08/20/microdata-and-rdfa-living-together-in-harmony.html">RDFa + Microdata!</a>
             </h2>
         </div>
     </section>
@@ -444,7 +444,7 @@
             <h2>Cниппет рецепта</h2>
             <pre>
                 <code>&lt;div itemscope itemtype="<mark class="important">http://schema.org/Recipe</mark>"&gt;</code>
-                <code>  &lt;h1 itemprop="<mark>name</mark>"&gt;Absolute Best Ever Lasagna&lt;/h1&gt;</code>
+                <code>  &lt;h1 itemprop="<mark>name</mark>"&gt;Lasagna&lt;/h1&gt;</code>
                 <code>  &lt;p itemprop="<mark>description</mark>"&gt;My family's favorite&hellip;&lt;/p&gt;</code>
                 <code>  &lt;div itemscope itemprop="<mark>aggregateRating</mark>" </code>
                 <code>       itemtype="<mark class="important">http://schema.org/AggregateRating</mark>"&gt;</code>
@@ -498,13 +498,13 @@
 					
 					
 							</div></section> -->
-    <section class="slide">
+    <section class="slide shout">
         <div>
             <h2>Разметка в письмах</h2>
-            <ul>
+            <!-- <ul>
                 <li>Google впереди всех (Gmail / Inbox)</li>
                 <li>Типы с Schema.org</li>
-            </ul>
+            </ul> -->
         </div>
     </section>
     <section class="slide cover w">
@@ -515,32 +515,16 @@
     </section>
     <section class="slide">
         <div>
-            <pre class="stretch"><code class="html">
-		<script charset="UTF-8" type="application/ld+json">
-		{
-		  "@context": "http://schema.org",
-		  "@type": "LodgingReservation",
-		  "reservationStatus": "http://schema.org/Confirmed",
-		  "reservationNumber": "995395827",
-		  "reservationFor": {
-		    "@type": "LodgingBusiness",
-		    "name": "Prime Apartments 3",
-		    "address": {
-		      "@type": "PostalAddress",
-		      "addressLocality": "Minsk",
-		      ...
-		    },
-		    "telephone": "+375447000205",
-		    "url": "https://www.booking.com/hotel/by/prime-apartments-3.html?aid=339530",
-		    "contactPoint": ""
-		  },
-		  ...
-		  "checkinDate": "2015-10-30T14:00:00+03:00",
-		  "checkoutDate": "2015-11-02T12:00:00+03:00",
-		  "url": "https://secure.booking.com/myreservations.ru.html?bn=995395827"
-		}
-		</script>
-	</code></pre>
+            <h2>Бронь отеля</h2>
+            <pre>
+                <code>{</code>
+                <code>  "@context": "http://schema.org",</code>
+                <code>  "@type": "LodgingReservation",</code>
+                <code>  ...</code>
+                <code>  "checkinDate": "2015-10-30T14:00:00+03:00",</code>
+                <code>  "checkoutDate": "2015-11-02T12:00:00+03:00"</code>
+                <code>}</code>
+            </pre>
         </div>
     </section>
     <section class="slide cover w">
@@ -548,44 +532,24 @@
     </section>
     <section class="slide">
         <div>
-            <pre class="stretch"><code class="html">
-		<script type="application/ld+json">
-		{
-		  "@context": "http://schema.org",
-		  "@type": "EventReservation",
-		  "reservationNumber": "E123456789",
-		  "reservationStatus": "http://schema.org/Confirmed",
-		  "underName": {"@type": "Person", "name": "Андрей Абрамов"}, 
-
-		  "reservationFor": {
-		    "@type": "Event",
-		    "name": "Web Standards Days",
-		    "startDate": "2015-10-30T09:00:00+03:00",
-		    "location": {
-		      "@type": "Place",
-		      "name": "Лофт-площадка SPACE",
-		      "address": {
-		        "@type": "PostalAddress",
-		        "streetAddress": "Октябрьская ул. 16",
-		        "addressLocality": "Минск",
-		        "addressCountry": "BY"
-		      }
-		    }
-		  },
-		  "numSeats": "1"
-		}
-		</script>
-	</code></pre>
+            <pre>
+                <code>{</code>
+                <code>  "@context": "http://schema.org",</code>
+                <code>  "@type": "EventReservation",</code>
+                <code>  "reservationFor": {</code>
+                <code>    "@type": "Event",</code>
+                <code>    "name": "Web Standards Days",</code>
+                <code>    "startDate": "2015-10-30T09:00:00+03:00"</code>
+                <code>  }</code>
+                <code>}</code>
+            </pre>
         </div>
     </section>
     <section class="slide">
         <div>
-            <h2>Actions</h2>
-            <img src="images/emails/click-actions.png" alt="" width="200">
-            <img src="images/emails/click-actions-i.png" width="200" alt="">
-            <br>
-            <img src="images/emails/go-actions.png" width="200" alt="">
-            <img src="images/emails/go-actions-i.png" width="200" alt="">
+            <h2>Действия</h2>
+            <img src="images/emails/click-actions.png" alt="" width="350">
+            <img src="images/emails/go-actions.png" width="350" alt="">
         </div>
     </section>
     <section class="slide">
@@ -593,40 +557,45 @@
             <h2>О чем рассказать в письме?</h2>
             <ul>
                 <li>Действия</li>
-                <li>Статьи</li>
-                <li>Заказы</li>
+                <li>Заказ из интернет магазина</li>
+                <li>Статус доставки</li>
                 <li>События</li>
-                <li>Бронь отеля / авто / ресторана</li>
+                <li>Статьи</li>
+                <li>Информация о полете</li>
+                <li>Бронирование отеля, ресторана</li>
             </ul>
         </div>
     </section>
-    <section class="slide">
-        <div>
-            <h2>Инструменты</h2>
-            <p>Ссылка</p>
-        </div>
-    </section>
-    <section class="slide">
+<!--     <section class="slide">
+    <div>
+        <h2>Инструменты</h2>
+        <p>Ссылка</p>
+    </div>
+</section> -->
+    <section class="slide shout">
         <div>
             <h2>Будущее</h2>
-            <img src="images/future/intro.jpg" alt="" class="stretch">
         </div>
+    </section>
+
+    <section class="slide cover h">
+        <img src="images/future/intro.jpg" alt="">
     </section>
     <section class="slide cover w">
         <div>
-            <img src="images/future/google-now.png" alt="" class="stretch">
+            <img src="images/future/google-now.png" alt="">
         </div>
     </section>
     <section class="slide cover h">
         <div>
-            <img src="images/future/apple.png" alt="" class="stretch">
+            <img src="images/future/apple.png" alt="">
         </div>
     </section>
-    <section class="slide cover w">
-        <div>
-            <img src="images/future/apple-2.jpg" alt="">
-        </div>
-    </section>
+<!--     <section class="slide cover w">
+    <div>
+        <img src="images/future/apple-2.jpg" alt="">
+    </div>
+</section> -->
     <section class="slide">
         <div>
             <img src="images/future/cortana3.png" alt="">
@@ -638,9 +607,15 @@
         <div>
             <h2>Будущее</h2>
             <ul>
-                <li>Google Now / Siri / Cortana</li>
+                <li>Интеллектуальные помощники
+                    <ul>
+                        <li>Google Now</li>
+                        <li>Siri</li>
+                        <li>Cortana</li>
+                    </ul>
+                </li>
+
                 <li>Интернет вещей</li>
-                <li>Evernote как хранилище объектов</li>
                 <li>Больше действий к объектам</li>
             </ul>
         </div>
