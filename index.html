@@ -12,8 +12,8 @@
 	<style>
 		.intro h2 {
 			font-size: 100px;
-			margin-top: 35px;
-			margin-bottom: 100px;
+			text-shadow: 0 6px #ccc;
+			margin-bottom: 21px;
 		}
 		.intro img {
 			position: absolute;
@@ -45,8 +45,11 @@
 						<img src="images/intro2.jpg" alt="" width="200">
 						<h2>Роботы имеют<br> право знать</h2>
 						<p>
-							<i>Заметки о Микроразметке</i><br>
-							<small>Андрей Абрамов, <a href="http://www.graph.uk/">Graph.uk</a></small>
+							<i>Заметки о микроразметке</i>
+						</p>
+						<p>
+							Андрей Абрамов, <a href="http://www.graph.uk/">Graph.uk</a><br>
+							Web Standards Days, Октябрь 2015
 						</p>
 					</div></section>
 
@@ -60,10 +63,12 @@
 							<li>Будущее</li>
 
 							<li>
-								<strike>Семантическая верстка</strike> <small><a href="http://html5doctor.com/">http://html5doctor.com/</a></small>
+								<strike>Семантическая верстка</strike>
+								<a href="http://html5doctor.com/">HTML5 Doctor</a>
 							</li>
 							<li>
-								<strike>CEO</strike> <small><a href="http://webstandardsdays.ru/2013/10/26/pres/seonism.pdf">Анна Селезнёва &laquo;Основы сеонизма&raquo;</a></small>
+								<strike>CEO</strike>
+								<a href="http://webstandardsdays.ru/2013/10/26/pres/seonism.pdf">Анна Селезнёва &laquo;Основы сеонизма&raquo;</a>
 							</li>
 						</ul>
 					</div></section>
@@ -84,17 +89,17 @@
 						<img src="images/interface_fry.jpg" alt="">
 					</section>
 
-					<section class="slide shout"><div>
-						<h2>Роботы ничего понимают</h2>
-					</div></section>
-
-					<section class="slide cover w">
+					<!-- <section class="slide cover w">
 						<img src="images/code.jpg" alt="">
-					</section>
+					</section> -->
 
 					<section class="slide cover w">
 						<img src="images/code_bender.jpg" alt="">
 					</section>
+
+					<section class="slide shout"><div>
+						<h2>Роботы ничего понимают</h2>
+					</div></section>
 
 					<section class="slide"><div>
 						<h2>Какие роботы?</h2>
@@ -117,40 +122,37 @@
 						</div>
 					</div></section>
 
-					<section class="slide shout"><div>
+					<!-- <section class="slide shout"><div>
 						<h2>Что делать?</h2>
-					</div></section>
+					</div></section> -->
 
 					<section class="slide shout"><div>
-						<h2>Микроразметка!</h2>
+						<h2>Микроразметка</h2>
 					</div></section>
 
 					<section class="slide"><div>
 						<h2>Терминология</h2>
-						<p><mark style="background-color: #86FF26;">Микроразметка</mark> &mdash; семантическая разметка
-						<br>
-
-						<mark>Микроформаты</mark> &mdash; инициатива microformats.org<br>
-						<mark>Микроданные</mark> &mdash; стандарт HTML5 microdata</p>
+						<p>
+							<mark>Микроразметка</mark> (семантическая разметка) &mdash; споcоб задать структуру и смысл данным в HTML с&nbsp;помощью дополнительных <br> тегов и атрибутов
+						</p>
+						<p>
+						<mark class="comment">Микроформаты</mark> &mdash; инициатива <a href="microformats.org">microformats.org</a><br>
+						<mark>Микроданные</mark> &mdash; стандарт микроразметки HTML5 microdata</p>
 					</div></section>
 
-					<section class="slide"><div>
-						<h2>Микроразметка?</h2>
-
-						<ul>
-							<li>Словарь</li>
-							<li>Синтаксис</li>
-							<li>(Пример кода)</li>
-						</ul>
+					<section class="slide shout"><div>
+						<h2>Словарь <br> &amp; <br> Синтаксис</h2>
 					</div></section>
 
 					<section class="slide"><div>
 						<h2>Словари</h2>
 
 						<ul>
-							<li>Open Graph</li>
-							<li>Schema.org</li>
+							<li><mark>Open Graph</mark></li>
+							<li><mark>Schema.org</mark></li>
 							<li>FOAF</li>
+							<li>GoodRelations</li>
+							<li>Dublin Core</li>
 							<li>...</li>
 						</ul>
 					</div></section>
@@ -158,18 +160,39 @@
 					<section class="slide"><div>
 						<h2>Синтаксисы</h2>
 						<ul class="timeline">
-							<li class="active">Microformats.org <br> (Tantek Çelik) <br>2006</li>
-							<li class="active">RDFa (W3C) <br> (Mark Birbeck) <br>2008</li>
-							<li class="active">Microdata <br> (Ian Hickson) <br>2009</li>
-							<li class="active">JSON-LD (W3C) <br> (Manu Sporny) <br>2010</li>
-							<li class="active">RDFa Lite (W3C) <br> (Manu Sporny) <br>2012</li>
+							<li>
+								MICROFORMATS <br>
+								<img src="images/formats/microformats.png"> <br> 
+								(Tantek Çelik) <br>
+								2006
+							</li>
+
+							<li>
+								RDFA <br> 
+								<img src="images/formats/rdfa.png"> <br> 
+								(Mark Birbeck) <br>
+								2008
+							</li>
+
+							<li>
+								MICRODATA <br> 
+								<img src="images/formats/microdata.png"> <br> 
+								(Ian Hickson) <br>
+								2009
+							</li>
+
+							<li>
+								JSON-LD <br> 
+								<img src="images/formats/json-ld.png"> <br> 
+								(Manu Sporny) <br>
+								2010
+							</li>
 						</ul>
 					</div></section>
 
-					<section class="slide"><div>
-						<h2>Почему синтаксисов так много?</h2>
-						<img src="images/standards.jpg" alt="" width="500">
-					</div></section>
+					<section class="slide cover h">
+						<img src="images/standards.jpg" alt="">
+					</section>
 
 					<section class="slide"><div>
 						<h2>Microformats</h2>
@@ -177,7 +200,7 @@
 							<code>&lt;div class="<mark>vcard</mark>"&gt;</code>
 							<code>    &lt;span class="<mark>fn</mark>"&gt;Mark Watney&lt;/span&gt;</code>
 							<code>    &lt;div class="<mark>org</mark>"&gt;NASA&lt;/div&gt;</code>
-							<!-- <code>    &lt;a class="email" href="..."&gt;potatoes@nasa.gov&lt;/a&gt;</code> -->
+							<!-- <code>    &lt;a class="<mark>email</mark>" href="..."&gt;potatoes@nasa.gov&lt;/a&gt;</code> -->
 							<code>    &lt;div class="<mark>adr</mark>"&gt;</code>
 							<code>        &lt;span class="<mark>country-name</mark>"&gt;USA&lt;/span&gt;</code>
 							<code>    &lt;/div&gt;</code>
@@ -222,17 +245,6 @@
 	}</code></pre>
 
 	
-					</div></section>
-					
-
-					<section class="slide"><div>
-						<h2>RDF/a Lite</h2>
-						<pre><code class="html"><div property="aggregateRating" typeof="AggregateRating">
-		<span property="ratingValue">87</span>
-		out of <span property="bestRating">100</span>
-		based on <span property="ratingCount">24</span> user ratings
-	</div></code></pre>
-
 					</div></section>
 
 					<section class="slide"><div>
