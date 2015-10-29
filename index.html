@@ -282,7 +282,7 @@
             <h2>Тенденции</h2>
             <ul>
             	<li><strike>Microformats</strike> сходят на нет</li>
-                <li class="next">OpenGraph теги записаны с помощью <b>RDFa</b></li>
+                <li class="next">Open Graph теги записаны с помощью <b>RDFa</b></li>
                 <li class="next"><b>Microdata</b> является наиболее распространенным форматом</li>
                 <li class="next">Google активно внедряет поддержку <b>JSON-LD</b></li>
             </ul>
@@ -297,19 +297,33 @@
         </div>
     </section>
 
-    <section class="slide shout">
+    <section class="slide">
+    	<div>
+    		<h2>Microdata itemref</h2>
+    		<pre>
+				<code>&lt;div itemscope itemtype="http://schema.org/Organization" </code>
+				<code>     <mark class="important">itemref</mark>="<mark>orgname</mark>"&gt;</code>
+				<code>     &lt;img src="logo.jpg" itemprop="image"&gt;</code>
+				<code>&lt;/div&gt;</code>
+				<code>&hellip;</code>
+				<code>&lt;div id="<mark>orgname</mark>" itemprop="name"&gt;SpaceX&lt;/div&gt;</code>
+    		</pre>
+    	</div>
+    </section>
+
+<!--     <section class="slide shout">
         <div>
             <h2>
                 <a target="_blank" href="http://www.jenitennison.com/2011/08/20/microdata-and-rdfa-living-together-in-harmony.html">RDFa + Microdata!</a>
             </h2>
         </div>
-    </section>
+    </section> -->
 
     <section class="slide">
         <div>
             <h2>Примеры использования</h2>
             <ul>
-                <li>Социальные сети</li>
+                <li class="next">Социальные сети</li>
                 <li class="next">Поисковые сниппеты</li>
                 <li class="next">Разметка в письмах</li>
                 <li class="next">...</li>
@@ -466,6 +480,7 @@
             <ul>
                 <li>Рецепт</li>
                 <li>Товар</li>
+                <li>Органиация</li>
                 <li>Событие</li>
                 <li>Приложение</li>
                 <li>Видео</li>
