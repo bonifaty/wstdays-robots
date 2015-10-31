@@ -320,24 +320,18 @@
     <section class="slide cover w">
         <img src="images/social/fb-preview.jpg" alt="">
     </section>
-    <section class="slide cover w">
-        <img src="images/social/tw-preview.jpg" alt="">
-    </section>
-    <!-- <section class="slide cover w">
-        <img src="images/social/vk-preview.jpg" alt="">
-    </section> -->
 
     <section class="slide">
         <div>
             <h2>Open Graph</h2>
             <pre>
                 <code>&lt;html <mark>prefix</mark>="og: http://ogp.me/ns#"&gt;</code>
-                <code>  &lt;meta property="<mark>og:title</mark>" content="Звезда смерти" /&gt;</code>
-                <code>  &lt;meta property="<mark>og:url</mark>" content="http://bit.ly/&hellip;" /&gt;</code>
-                <code>  &lt;meta property="<mark>og:description</mark>" content="Описание&hellip;" /&gt;</code>
+                <code>&lt;head&gt;</code>
+                <code>  &lt;meta property="<mark>og:title</mark>" content="Заголовок" /&gt;</code>
+                <code>  &lt;meta property="<mark>og:type</mark>" content="Тип данных" /&gt;</code>
+                <code>  &lt;meta property="<mark>og:description</mark>" content="Описание" /&gt;</code>
                 <code>  &lt;meta property="<mark>og:image</mark>" content="http://&hellip;/image.jpg" /&gt;</code>
-                <code>  &lt;meta name="<mark>twitter:card</mark>" content="summary" /&gt;</code>
-                <code>  &hellip;</code>
+                <code>  &lt;meta property="<mark>og:url</mark>" content="http://bit.ly/&hellip;" /&gt;</code>
             </pre>
         </div>
     </section>
@@ -348,6 +342,8 @@
             <pre>
                 <code>&hellip;</code>
                 <code>&lt;meta property="<mark>og:image</mark>" content="http://&hellip;/image.jpg" /&gt;</code>
+                <code>&lt;meta property="og:image:secure_url" content="https://&hellip;" /&gt;</code>
+                <code>&lt;meta property="og:image:type" content="image/jpeg" /&gt;</code>
                 <code>&lt;meta property="<mark>og:image:width</mark>" content="600" /&gt;</code>
                 <code>&lt;meta property="<mark>og:image:height</mark>" content="600" /&gt;</code>
                 <code>&hellip;</code>
@@ -431,23 +427,22 @@
     </section>
     <section class="slide">
         <div>
-            <h2>Сниппет рецепта</h2>
-            <img src="images/search/recipe.jpg" alt="">            
-        </div>
-    </section>
-    <section class="slide">
-        <div>
             <h2>Cниппет рецепта</h2>
             <pre>
                 <code>&lt;div itemscope itemtype="<mark class="important">http://schema.org/Recipe</mark>"&gt;</code>
-                <code>  &lt;h1 itemprop="<mark>name</mark>"&gt;Lasagna&lt;/h1&gt;</code>
                 <code>  &lt;p itemprop="<mark>description</mark>"&gt;My family's favorite&hellip;&lt;/p&gt;</code>
+                <code>  &lt;img itemprop="<mark>image</mark>" src="http://&hellip;/image.jpg" /&gt;</code>
                 <code>  &lt;div itemscope itemprop="<mark>aggregateRating</mark>" </code>
                 <code>       itemtype="<mark class="important">http://schema.org/AggregateRating</mark>"&gt;</code>
                 <code>    Rating: &lt;span itemprop="<mark>ratingValue</mark>"&gt;5.0&lt;/span&gt;</code>
                 <code>  &lt;/div&gt;</code>
                 <code>&lt;/div&gt;</code>
             </pre>
+        </div>
+    </section>
+    <section class="slide cover w">
+        <div>
+            <img src="images/search/recipe.jpg" alt="">            
         </div>
     </section>
     <section class="slide">
